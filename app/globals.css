@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-wrapper{
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+    aspect-ratio: 70/45;
+    margin: 2rem auto;
+}
+
+@layer components {
+    .card{
+        @apply rounded-xl shadow-lg;
+    }
+}
