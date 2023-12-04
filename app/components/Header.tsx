@@ -122,7 +122,7 @@ function Header() {
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/Image/Logo/GraceSolutionLogo.png"
+              src="./Image/Logo/GraceSolutionLogo.png"
               width={100}
               height={75}
               alt={"Grace Solution Logo"}
@@ -176,7 +176,7 @@ function Header() {
                 {" "}
                 <Link href="/">
                   <Image
-                    src="/Image/Logo/GraceSolutionLogo.png"
+                    src="./Image/Logo/GraceSolutionLogo.png"
                     width={100}
                     height={75}
                     alt={"Grace Solution Logo"}

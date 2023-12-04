@@ -12,7 +12,7 @@ export default function About() {
         type: "IMAGE",
         source: {
           name: "dunkirk beach",
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -22,7 +22,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -34,7 +34,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -44,7 +44,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -55,7 +55,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -66,7 +66,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -77,7 +77,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -88,7 +88,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -98,7 +98,7 @@ export default function About() {
       media: {
         type: "IMAGE",
         source: {
-          url: "/Image/green-cable.jpg",
+          url: "./Image/green-cable.jpg",
         },
       },
     },
@@ -188,7 +188,7 @@ export default function About() {
           <div className="w-4/12 flex flex-col items-center justify-center ml-10">
             <Image
               className="mx-auto  shadow-lg overflow-hidden rounded-l"
-              src="/Image/green-cable.jpg"
+              src="./Image/green-cable.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={400}

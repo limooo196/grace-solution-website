@@ -34,7 +34,7 @@ export default function Services() {
           <div className="flex flex-col  p-10 flex-grow-0 w-3/12 sm:w-6/12 justify-center items-top">
             <Image
               className="mx-auto rounded-xl shadow-lg overflow-hidden "
-              src="/Image/green-cable.jpg"
+              src="./Image/green-cable.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={300}
@@ -50,7 +50,7 @@ export default function Services() {
           <div className="flex flex-col  p-10 flex-grow-0 w-3/12 sm:w-6/12 justify-center items-top">
             <Image
               className="mx-auto rounded-xl shadow-lg overflow-hidden "
-              src="/Image/green-cable.jpg"
+              src="./Image/green-cable.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={300}
@@ -110,7 +110,7 @@ export default function Services() {
           <div className="flex flex-col  p-10 flex-grow-0 w-3/12 sm:w-6/12 justify-center items-top">
             <Image
               className="mx-auto rounded-xl shadow-lg overflow-hidden "
-              src="/Image/green-cable.jpg"
+              src="./Image/green-cable.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={300}

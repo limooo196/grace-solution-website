@@ -23,7 +23,7 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-cover bg-center xl:pt-12 xl:pb-0 w-full h-[960px] lg:-my-4 ">
         <Image
-          src="/Image/green-cable.jpg"
+          src="./Image/green-cable.jpg"
           width={900}
           height={700}
           alt={"Grace Solution Logo"}
@@ -117,7 +117,7 @@ export default function Home() {
               <div className="mx-auto my-auto h-[50vh] w-full m-auto ">
                 <Image
                   className="mx-auto image-wrapper"
-                  src="/Image/green-cable.jpg"
+                  src="./Image/green-cable.jpg"
                   sizes="(max-width:950px) 100vw,700px"
                   alt={"Grace Solution Logo"}
                   width={400}
@@ -127,7 +127,7 @@ export default function Home() {
               <div className="mx-auto my-auto h-[50vh] w-full  m-auto ">
                 <Image
                   className="mx-auto image-wrapper"
-                  src="/Image/green-cable.jpg"
+                  src="./Image/green-cable.jpg"
                   sizes="(max-width:750px) 100vw,700px"
                   alt={"Grace Solution Logo"}
                   width={300}
@@ -137,7 +137,7 @@ export default function Home() {
               <div className="mx-auto my-auto h-[50vh] w-full  m-auto ">
                 <Image
                   className="mx-auto image-wrapper"
-                  src="/Image/green-cable.jpg"
+                  src="./Image/green-cable.jpg"
                   sizes="(max-width:750px) 100vw,700px"
                   alt={"Grace Solution Logo"}
                   width={300}
@@ -147,7 +147,7 @@ export default function Home() {
               <div className="mx-auto my-auto h-[50vh] w-full m-auto ">
                 <Image
                   className="mx-auto image-wrapper"
-                  src="/Image/green-cable.jpg"
+                  src="./Image/green-cable.jpg"
                   sizes="(max-width:750px) 100vw,700px"
                   alt={"Grace Solution Logo"}
                   width={300}
@@ -175,7 +175,7 @@ export default function Home() {
                 <div className="p-5 flex flex-col">
                   <Image
                     className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="/Image/green-cable.jpg"
+                    src="./Image/green-cable.jpg"
                     sizes="(max-width:950px) 100vw,700px"
                     alt={"Grace Solution Logo"}
                     width={400}
@@ -204,7 +204,7 @@ export default function Home() {
                 <div className="p-5 flex flex-col">
                   <Image
                     className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="/Image/green-cable.jpg"
+                    src="./Image/green-cable.jpg"
                     sizes="(max-width:950px) 100vw,700px"
                     alt={"Grace Solution Logo"}
                     width={400}
@@ -233,7 +233,7 @@ export default function Home() {
                 <div className="p-5 flex flex-col">
                   <Image
                     className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="/Image/green-cable.jpg"
+                    src="./Image/green-cable.jpg"
                     sizes="(max-width:950px) 100vw,700px"
                     alt={"Grace Solution Logo"}
                     width={400}
