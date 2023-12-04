@@ -69,7 +69,7 @@ export default function Services() {
                 Our insert molding stands out for its precision engineering,
                 seamless integration of components, and superior material
                 quality. Meticulous attention to detail ensures optimal
-                performance, making our insert molding the industry`'`s top
+                performance, making our insert molding the industry`&apos;`s top
                 choice for reliability and durability.
               </p>
             </div>
