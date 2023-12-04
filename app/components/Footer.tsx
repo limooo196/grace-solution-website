@@ -31,7 +31,7 @@ function Footer() {
             <div className="">
               <Link href="/">
                 <Image
-                  src="/Image/Logo/GraceSolutionLogo.png"
+                  src="./Image/Logo/GraceSolutionLogo.png"
                   width={120}
                   height={80}
                   alt={"Grace Solution Logo"}

@@ -266,7 +266,7 @@ export default function Home() {
           <div className="flex flex-col xl:flex-row gap-6 justify-center items-center">
             <Image
               className="mx-auto "
-              src="/Image/logo/oriex.png"
+              src="./Image/logo/oriex.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={400}
@@ -274,7 +274,7 @@ export default function Home() {
             />
             <Image
               className="mx-auto "
-              src="/Image/logo/servo.jpg"
+              src="./Image/logo/servo.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={400}
@@ -282,7 +282,7 @@ export default function Home() {
             />
             <Image
               className="mx-auto "
-              src="/Image/logo/osie.png"
+              src=".Image/logo/osie.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={400}
@@ -290,7 +290,7 @@ export default function Home() {
             />
             <Image
               className="mx-auto"
-              src="/Image/logo/pegatron.png"
+              src="./Image/logo/pegatron.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={400}
@@ -298,7 +298,7 @@ export default function Home() {
             />
             <Image
               className="mx-auto "
-              src="/Image/logo/sumitomo.png"
+              src="./Image/logo/sumitomo.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={400}
@@ -306,7 +306,7 @@ export default function Home() {
             />
             <Image
               className="mx-auto "
-              src="/Image/logo/siix.jpg"
+              src="./Image/logo/siix.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={400}
