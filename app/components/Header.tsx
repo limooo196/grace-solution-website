@@ -124,7 +124,7 @@ function Header() {
             <Image
               src="./Image/Logo/GraceSolutionLogo.png"
               width={100}
-              height={75}
+              height={100}
               alt={"Grace Solution Logo"}
               className="cursor-pointer"
             />
@@ -142,7 +142,7 @@ function Header() {
 
           <div className="flex justify-center items-center gap-x-2 lg:justify-normal hover:bg-blue-400 w-[220px] h-[50px] lg:w-auto m-auto lg:mx-0 font-bold px-4 border border-blue-500 hover:border-transparent rounded cursor-pointer">
             <BsWhatsapp className="text-green-400 text-2xl " />
-            <div>Book now</div>
+            <div>Contact Us</div>
           </div>
           {/* Mobile Nav */}
 
@@ -187,22 +187,22 @@ function Header() {
               {/* List */}
               <ul>
                 <li className="text-secondary hover:text-sky-300 transition-all duration-300">
-                  <Link href="#"> Services </Link>
+                  <Link href="/services"> Services </Link>
                 </li>
                 <li className="text-secondary hover:text-sky-300 transition-all duration-300">
-                  <Link href="#"> Products </Link>
+                  <Link href="/products"> Products </Link>
                 </li>
                 <li className="text-secondary hover:text-sky-300 transition-all duration-300">
-                  <Link href="#"> About </Link>
+                  <Link href="/about"> About </Link>
                 </li>
                 <li className="text-secondary hover:text-sky-300 transition-all duration-300">
-                  <Link href="#"> Contact us </Link>
+                  <Link href="/contact"> Contact us </Link>
                 </li>
               </ul>
             </div>
           </nav>
           {/* Desktop nav */}
-          <nav className="bg-white border-2 absolute w-full left-0 -bottom-[86px] shadow-lg h-16 rounded-[10px] flex lg:items-center lg:justify-center lg:mx-[30px] md:invisible sm:invisible lg:visible  ">
+          <nav className="bg-white hidden md:flex z-10  border-2 absolute w-full left-0 -bottom-[86px] shadow-lg h-16 rounded-[10px]  lg:items-center lg:justify-center lg:mx-[30px] md:invisible sm:invisible lg:visible  ">
             <ul className="flex gap-x-48  ">
               <li className="text-secondary hover:text-sky-300 transition-all duration-300 border-r pr-4 ">
                 <Link href="/services"> Services </Link>
