@@ -45,34 +45,104 @@ export default function Home() {
                   of clients.
                 </p>
               </div>
+              <div>
+                <ul className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
+                  <li className="m-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48 my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto "
+                      src="../Image/wire_harness/wire1.png"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={200}
+                      height={200}
+                    />
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto "
+                      src="../Image/wire_harness/wire2.png"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={200}
+                    />
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/wire_harness/wire3.png"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48 my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/wire_harness/wire4.png"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={200}
+                      height={200}
+                    />
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-30 md:h-48 my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/wire_harness/wire5.png"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-30 md:h-48 my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/wire_harness/wire6.png"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                  </li>
+                </ul>
+              </div>
             </li>
 
             <li>
-              <div>
+              <div className="">
                 <h3 className="text-lg font-bold flex items-start p-1 text-blue-500">
                   Tackle Industry-Specific Solutions
                 </h3>
-                <p className="w-10/12 mx-auto">
-                  We have the ability and experience to address
-                  Industry-Specific Solutions in wire harness services is
-                  underpinned by a nuanced understanding of diverse sectors.
+                <div className="w-10/12 mx-auto">
+                  <p>
+                    We have the ability and experience to address
+                    Industry-Specific Solutions in wire harness services is
+                    underpinned by a nuanced understanding of diverse sectors.
+                  </p>
                   <br />
-                  <br />
+
                   <div className="">
                     <h4>Industries that we closely worked with</h4>
                     <ul className="list-disc ml-3	">
                       <li>Lighting Wire Harnesses</li>
                       <li>Wire harness assemblies for electronics</li>
+                      <li>Automotive</li>
                     </ul>
                   </div>
                   <br />
-                  The specialized knowledge allows us to tailor wire harness
-                  solutions to meet the unique demands various sectors, ensuring
-                  optimal performance, compliance, and reliability. Our service
-                  stands out for its adaptability, technical expertise, and a
-                  proven track record in delivering industry-specific wire
-                  harness solutions that surpass expectations.
-                </p>
+                  <p>
+                    The specialized knowledge allows us to tailor wire harness
+                    solutions to meet the unique demands various sectors,
+                    ensuring optimal performance, compliance, and reliability.
+                    Our service stands out for its adaptability, technical
+                    expertise, and a proven track record in delivering
+                    industry-specific wire harness solutions that surpass
+                    expectations.
+                  </p>
+                </div>
               </div>
             </li>
 
@@ -97,6 +167,89 @@ export default function Home() {
                   benchmark for excellence and reliability in the wire harness
                   industry.
                 </p>
+                <ul className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72 my-auto flex flex-col items-center ">
+                    <Image
+                      className=" "
+                      src="../Image/testing_tool/harness_tester.jpg"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+
+                    <div className="">
+                      <p>Cable Harness Tester</p>
+                    </div>
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72 my-auto flex flex-col items-center ">
+                    <Image
+                      className=" "
+                      src="../Image/testing_tool/terminal_cross_section_analyzer.jpg"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={200}
+                    />
+                    <div>
+                      <p>Cross Section Analyzer</p>
+                    </div>
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-48 md:h-72 my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/testing_tool/withstanding_voltage_test.jpg "
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                    <div className="flex flex-col items-center justify-center mx-auto p-2">
+                      <p className="flex flex-row items-center justify-center mx-auto">
+                        Voltage and Insulation Resistance Tester
+                      </p>
+                    </div>
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72  my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/testing_tool/caliper.jpg"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                    <div>
+                      <p>Caliper</p>
+                    </div>
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-48 md:h-72  my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/testing_tool/micrometer.jpg"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                    <div>
+                      <p>Micrometer</p>
+                    </div>
+                  </li>
+                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-48 md:h-72  my-auto flex flex-col items-center ">
+                    <Image
+                      className="m-auto"
+                      src="../Image/testing_tool/push_pull_scale.jpg"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                    <div>
+                      <p>Push Pull Scale</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </li>
 
@@ -142,6 +295,39 @@ export default function Home() {
                   but also serve as a testament to our unwavering commitment to
                   delivering wire harness solutions of the highest caliber.
                 </p>
+                <br />
+                <h2 className="w-10/12 mx-auto font-bold">
+                  Our Proudest Certifications
+                </h2>
+                <div className="flex flex-row justify-center items-center mx-auto">
+                  <div className="mx-auto">
+                    <Image
+                      className=" "
+                      src="../Image/certificates/cert1.jpg"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                    <h3 className="font-semibold mx-auto">
+                      Certificate ISO 9001:2015 by TUV Rheinland
+                    </h3>
+                  </div>
+
+                  <div className="mx-auto">
+                    <Image
+                      className=" "
+                      src="../Image/certificates/cert2.jpg"
+                      sizes="(max-width:950px) 100vw,700px"
+                      alt={"Grace Solution Logo"}
+                      width={250}
+                      height={250}
+                    />
+                    <h3 className="font-semibold">
+                      Certificate of Wire Harness Component by UL
+                    </h3>
+                  </div>
+                </div>
               </div>
             </li>
           </ul>

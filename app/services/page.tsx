@@ -33,12 +33,12 @@ export default function Services() {
 
           <div className="flex flex-col  md:p-10 flex-grow-0 lg:w-3/12 w-4/12 justify-center items-top">
             <Image
-              className="mx-auto rounded-xl shadow-lg overflow-hidden "
-              src="./Image/green-cable.jpg"
-              sizes="(max-width:950px) 100vw,700px"
+              className="mx-auto rounded-xl  "
+              src="./Image/wire_harness_2.png"
+              sizes="(max-width:200px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={300}
-              height={300}
+              height={150}
             />
           </div>
         </div>
@@ -49,12 +49,12 @@ export default function Services() {
         <div className="bg-gray-300 xl:w-9/12   xl:h-80 flex flex-row flex-grow rounded-lg ">
           <div className=" flex flex-col  md:p-10 flex-grow-0 lg:w-3/12 w-4/12 justify-center items-top ">
             <Image
-              className="mx-auto rounded-xl shadow-lg overflow-hidden "
-              src="./Image/green-cable.jpg"
-              sizes="(max-width:950px) 100vw,700px"
+              className="mx-auto rounded-xl  "
+              src="./Image/insert_molding_2.png"
+              sizes="(max-width:20px) 100vw,70px"
               alt={"Grace Solution Logo"}
-              width={300}
-              height={300}
+              width={600}
+              height={500}
             />
           </div>
           <div className=" w-9/12 md:m-5 md:p-8 p-4">
@@ -111,13 +111,53 @@ export default function Services() {
 
           <div className="flex flex-col  md:p-10 flex-grow-0 lg:w-3/12 w-4/12 justify-center items-top">
             <Image
-              className="mx-auto rounded-xl shadow-lg overflow-hidden "
-              src="./Image/green-cable.jpg"
+              className="mx-auto "
+              src="./Image/tooling_pabrication_1.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={300}
               height={300}
             />
+          </div>
+        </div>
+      </div>
+      <div className="ml-3/12 lg:mt-3 md:mt-12 xl:px-60 sm:px-10 xl:w-10/12 my-2 mx-auto flex justify-center items-center">
+        <div className="bg-gray-300 xl:w-9/12   xl:h-80 flex flex-row flex-grow rounded-lg ">
+          <div className=" flex flex-col  md:p-10 flex-grow-0 lg:w-5/12 w-5/12 justify-center items-top ">
+            <Image
+              className="mx-auto  rounded-lg ml-2 "
+              src="./Image/warehouse.jpg"
+              sizes="(max-width:20px) 100vw,700px"
+              alt={"Grace Solution Logo"}
+              width={1000}
+              height={800}
+            />
+          </div>
+          <div className=" w-9/12 md:m-5 md:p-8 p-4">
+            <div>
+              <h2 className="lg:text-2xl text-xl font-bold">
+                Warehouse and Logistics
+              </h2>
+            </div>
+
+            <br />
+            <br className="hidden lg:block" />
+
+            <div className="lg:mb-1 mb-3">
+              <p className="xl:mt-2 text-md">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Molestiae laudantium veniam cumque, est corporis reprehenderit
+                neque, commodi ducimus dicta mollitia doloremque quam totam
+                nulla nihil! Eveniet esse error fugit distinctio?
+              </p>
+            </div>
+
+            <button
+              type="button"
+              className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              <Link href="/services/warehouse"> Find More Information </Link>
+            </button>
           </div>
         </div>
       </div>

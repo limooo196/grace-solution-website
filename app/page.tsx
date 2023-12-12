@@ -222,7 +222,7 @@ export default function Home() {
         </div>
       </section>
       {/* Service */}
-      <section className="mx-auto mt-12 lg:mt-32 w-4/5   ">
+      <section className="mx-auto mt-12 lg:mt-32 w-11/5   ">
         <div>
           {/* Service Header */}
           <div className="mx-auto">
@@ -231,8 +231,8 @@ export default function Home() {
             </h1>
           </div>
           {/* Service card display */}
-          <div className="flex items-center justify-center  container m-auto my-4 w-full ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto xl:gap-24 md:gap-4">
+          <div className="flex items-start justify-start  container m-auto my-4 w-full ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto xl:gap-24 md:gap-4">
               {/* Card 1 */}
               <div className="rounded-xl shadow-lg card h-full ">
                 <div className="p-5 flex flex-col">
@@ -245,7 +245,7 @@ export default function Home() {
                     height={400}
                   />
                   <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
-                    hehe
+                    Wire Harness
                   </h5>
                   <p className="text-slate-500 text-md lg:text-lg mt-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -277,7 +277,7 @@ export default function Home() {
                     height={400}
                   />
                   <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
-                    hehe
+                    Insert Molding
                   </h5>
                   <p className="text-slate-500 text-md lg:text-lg  mt-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -308,7 +308,37 @@ export default function Home() {
                     height={400}
                   />
                   <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
-                    hehe
+                    Tooling Pabrication
+                  </h5>
+                  <p className="text-slate-500 text-md lg:text-lg mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quia sequi ea, amet aperiam harum laudantium earum placeat
+                    ullam rerum unde neque modi laboriosam error magni?
+                    Repellendus similique cupiditate vel quaerat.
+                  </p>
+                  <button
+                    type="button"
+                    className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  >
+                    <Link href="" className="">
+                      Explore more
+                    </Link>
+                  </button>
+                </div>
+              </div>
+
+              <div className="rounded-xl shadow-lg card ">
+                <div className="p-5 flex flex-col">
+                  <Image
+                    className="mx-auto rounded-xl shadow-lg overflow-hidden"
+                    src="./Image/green-cable.jpg"
+                    sizes="(max-width:950px) 100vw,700px"
+                    alt={"Grace Solution Logo"}
+                    width={400}
+                    height={400}
+                  />
+                  <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
+                    Warehouse
                   </h5>
                   <p className="text-slate-500 text-md lg:text-lg mt-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
