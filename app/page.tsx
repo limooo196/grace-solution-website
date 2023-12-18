@@ -237,14 +237,15 @@ export default function Home() {
               <div className="rounded-xl shadow-lg card h-full ">
                 <div className="p-5 flex flex-col">
                   <Image
-                    className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="./Image/green-cable.jpg"
-                    sizes="(max-width:950px) 100vw,700px"
+                    className="mx-auto rounded-xl  "
+                    src="./Image/fix_size/rsz_wire_harness_3.png"
+                    sizes="(max-width:200px) 100vw,700px"
                     alt={"Grace Solution Logo"}
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={150}
                   />
-                  <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
+
+                  <h5 className="text-2xl  font-medium mt-3 mx-auto">
                     Wire Harness
                   </h5>
                   <p className="text-slate-500 text-md lg:text-lg mt-3">
@@ -269,14 +270,14 @@ export default function Home() {
               <div className="rounded-xl shadow-lg card ">
                 <div className="p-5 flex flex-col">
                   <Image
-                    className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="./Image/green-cable.jpg"
+                    className="mx-auto rounded-xl "
+                    src="./Image/fix_size/rsz_insert_molding.jpg"
                     sizes="(max-width:950px) 100vw,700px"
                     alt={"Grace Solution Logo"}
                     width={400}
                     height={400}
                   />
-                  <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
+                  <h5 className="text-2xl  font-medium mt-3 mx-auto">
                     Insert Molding
                   </h5>
                   <p className="text-slate-500 text-md lg:text-lg  mt-3">
@@ -301,15 +302,18 @@ export default function Home() {
                 <div className="p-5 flex flex-col">
                   <Image
                     className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="./Image/green-cable.jpg"
+                    src="./Image/tooling_pabrication.jpeg"
                     sizes="(max-width:950px) 100vw,700px"
                     alt={"Grace Solution Logo"}
                     width={400}
                     height={400}
                   />
-                  <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
-                    Tooling Pabrication
-                  </h5>
+                  <div className="whitespace-nowrap	  w-24">
+                    <h5 className="text-2xl md:text-2xl font-medium mt-3 mx-auto ">
+                      Tooling Pabrication
+                    </h5>
+                  </div>
+
                   <p className="text-slate-500 text-md lg:text-lg mt-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quia sequi ea, amet aperiam harum laudantium earum placeat
@@ -331,13 +335,13 @@ export default function Home() {
                 <div className="p-5 flex flex-col">
                   <Image
                     className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="./Image/green-cable.jpg"
+                    src="./Image/fix_size/rsz_warehouse.jpg"
                     sizes="(max-width:950px) 100vw,700px"
                     alt={"Grace Solution Logo"}
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={500}
                   />
-                  <h5 className="text-2xl md:text-3xl font-medium mt-3 mx-auto">
+                  <h5 className="text-2xl md:text-2xl font-medium mt-3 mx-auto">
                     Warehouse
                   </h5>
                   <p className="text-slate-500 text-md lg:text-lg mt-3">
@@ -348,7 +352,7 @@ export default function Home() {
                   </p>
                   <button
                     type="button"
-                    className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    className="text-white   md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                   >
                     <Link href="" className="">
                       Explore more
@@ -361,6 +365,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Grace Solutions */}
+      <section>
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="font-bold text-3xl underline">
+            Why We Are One of The Market Leader{" "}
+          </h1>
+        </div>
+
+        <ul>
+          <li>Great Infrastructure</li>
+          <li>24 Hours Delivery Service </li>
+          <li>Air Delivery Service</li>
+          <li>Just In Time Service</li>
+          <li>Completely Certified and Comply with International Standards</li>
+          <li>Competitive Pricing</li>
+        </ul>
+      </section>
       <section className=" xl:my-auto m-auto  ">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
@@ -415,8 +436,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Why Grace Solutions */}
-      <section></section>
     </main>
   );
 }

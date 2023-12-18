@@ -63,7 +63,7 @@ export default function Home() {
                       src="../Image/wire_harness/wire2.png"
                       sizes="(max-width:950px) 100vw,700px"
                       alt={"Grace Solution Logo"}
-                      width={250}
+                      width={200}
                       height={200}
                     />
                   </li>
@@ -170,7 +170,7 @@ export default function Home() {
                 <ul className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
                   <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72 my-auto flex flex-col items-center ">
                     <Image
-                      className=" "
+                      className="m-auto "
                       src="../Image/testing_tool/harness_tester.jpg"
                       sizes="(max-width:950px) 100vw,700px"
                       alt={"Grace Solution Logo"}
@@ -184,7 +184,7 @@ export default function Home() {
                   </li>
                   <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72 my-auto flex flex-col items-center ">
                     <Image
-                      className=" "
+                      className=" m-auto"
                       src="../Image/testing_tool/terminal_cross_section_analyzer.jpg"
                       sizes="(max-width:950px) 100vw,700px"
                       alt={"Grace Solution Logo"}
