@@ -14,7 +14,13 @@ import {
   BsInstagram,
   BsXCircle,
   BsLinkedin,
+  BsBuildingFillGear,
 } from "react-icons/bs";
+import { FaShippingFast, FaHelicopter } from "react-icons/fa";
+import { IoIosTimer } from "react-icons/io";
+import { TbCertificate } from "react-icons/tb";
+import { MdOutlinePriceCheck } from "react-icons/md";
+
 import { AiOutlineMail } from "react-icons/ai";
 
 export default function Home() {
@@ -270,7 +276,7 @@ export default function Home() {
               <div className="rounded-xl shadow-lg card ">
                 <div className="p-5 flex flex-col">
                   <Image
-                    className="mx-auto rounded-xl "
+                    className="mx-auto rounded-xl wha"
                     src="./Image/fix_size/rsz_insert_molding.jpg"
                     sizes="(max-width:950px) 100vw,700px"
                     alt={"Grace Solution Logo"}
@@ -367,20 +373,75 @@ export default function Home() {
 
       {/* Why Grace Solutions */}
       <section>
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="font-bold text-3xl underline">
-            Why We Are One of The Market Leader{" "}
-          </h1>
-        </div>
+        <div className="flex flex-col items-center justify-center mb-5 mt-10">
+          <div className="ml-3/12 lg:mt-3 md:mt-12 xl:px-60 sm:px-10 w-full my-2 mx-auto flex justify-center items-center">
+            <div className="bg-gray-200 flex flex-col flex-grow rounded-lg p-2   border-black shadow-3lg ">
+              <h1 className="font-bold text-2xl underline mx-auto mt-3 mb-8">
+                Why We Are One of The Market Leader
+              </h1>
 
-        <ul>
-          <li>Great Infrastructure</li>
-          <li>24 Hours Delivery Service </li>
-          <li>Air Delivery Service</li>
-          <li>Just In Time Service</li>
-          <li>Completely Certified and Comply with International Standards</li>
-          <li>Competitive Pricing</li>
-        </ul>
+              <div className="flex md:flex-row flex-col">
+                <div className=" m-auto ">
+                  <ul className="flex-row flex whitespace-nowrap  gap-10">
+                    <div className=" md:w-5/12 w-10/12	">
+                      <li className="mx-auto my-2 text-sm ,md:text-md ">
+                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
+                          <BsBuildingFillGear />
+                        </div>
+                        Great Infrastructure
+                      </li>
+
+                      <li className="mx-auto my-2 text-sm ,md:text-md ">
+                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
+                          <FaShippingFast />
+                        </div>
+                        24 Hours Delivery Service
+                      </li>
+                      <li className="mx-auto my-2 text-sm ,md:text-md ">
+                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
+                          <FaHelicopter />
+                        </div>
+                        Air Delivery Service
+                      </li>
+                    </div>
+
+                    <div className=" w-5/12">
+                      <li className="mx-auto my-2 text-sm ,md:text-md ">
+                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
+                          <IoIosTimer />
+                        </div>
+                        Just In Time Service
+                      </li>
+
+                      <li className="mx-auto my-2 text-sm ,md:text-md ">
+                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
+                          <MdOutlinePriceCheck />
+                        </div>
+                        Competitive Pricing
+                      </li>
+                      <li className="mx-auto my-2 text-sm ,md:text-md ">
+                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
+                          <TbCertificate />
+                        </div>
+                        Certified with Industry Standards
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+                <div className="m-auto p-2 w-4/12 md:w-5/12">
+                  <Image
+                    className="mx-auto "
+                    src="./Image/CompanyPic.jpg"
+                    sizes="(max-width:950px) 100vw,700px"
+                    alt={"Grace Solution Logo"}
+                    width={350}
+                    height={350}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section className=" xl:my-auto m-auto  ">
         <div className="container mx-auto">

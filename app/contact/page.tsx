@@ -1,8 +1,5 @@
+"use client";
 
-export default function Page() {
-    return 
-  <main>
-    contact
-    <h2>llsg</h2>
-  </main>
-  }
+export default function Contact() {
+  return <main></main>;
+}

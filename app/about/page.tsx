@@ -171,9 +171,9 @@ export default function About() {
         </div>
       </div>
       {/* vision mission, https://powr2.com/about/ */}
-      <div className="flex flex-col bg-blue-400 w-8/12 mx-auto h-5/12 items-center justify-center p-8 m-auto">
+      <div className="flex flex-col bg-blue-300 w-9/12 mx-auto h-5/12 items-center justify-center p-8 m-auto rounded-md">
         <div className="flex flex-row mx-auto p-3 mb-8 my-auto">
-          <div className="w-6/12">
+          <div className="w-8/12">
             <h1 className="text-xl font-bold">Grace Solutions</h1>
             <h2 className="text-xl font-bold text-yellow-200 my-2 underline">
               Wire Excellence, Seamless Connections.
