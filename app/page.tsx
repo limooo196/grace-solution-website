@@ -26,6 +26,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FaToolbox, FaWarehouse, FaWrench, FaCube } from "react-icons/fa";
 
 import { AiOutlineMail } from "react-icons/ai";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   return (
@@ -63,7 +65,7 @@ export default function Home() {
             <div className="mt-8">
               <a
                 href="https://wa.me/"
-                className="flex items-center justify-center gap-x-2 bg-[#25D366] text-white font-bold rounded-md px-4 py-2 shadow-lg hover:bg-[#1DAF54] transition w-48 mx-auto lg:mx-0"
+                className="flex items-center justify-center gap-x-2 bg-[#25D366] hover:bg-[#1DAF54]  text-white font-bold rounded-md px-4 py-2 shadow-lg transition w-48 mx-auto lg:mx-0"
               >
                 <BsWhatsapp className="text-2xl" />
                 <span>Contact Us</span>
