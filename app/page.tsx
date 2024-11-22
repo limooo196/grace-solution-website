@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Carousel from "nuka-carousel";
 import {
   BsList,
   BsX,
@@ -15,355 +14,320 @@ import {
   BsXCircle,
   BsLinkedin,
   BsBuildingFillGear,
+  BsArrowRightCircle,
 } from "react-icons/bs";
 import { FaShippingFast, FaHelicopter } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
 import { TbCertificate } from "react-icons/tb";
 import { MdOutlinePriceCheck } from "react-icons/md";
 
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { FaToolbox, FaWarehouse, FaWrench, FaCube } from "react-icons/fa";
+
 import { AiOutlineMail } from "react-icons/ai";
 
 export default function Home() {
   return (
     <main className="">
-      {/* Hero */}
-      <section className="bg-cover bg-center xl:pt-12 xl:pb-0 w-full h-[920px] lg:h-[960px] lg:-my-4 ">
+      <section className="relative w-full h-[920px] lg:h-[960px]">
+        {/* Background Image */}
         <Image
           src="./Image/green-cable.jpg"
           width={900}
           height={700}
-          alt={"Grace Solution Logo"}
-          className="w-full  object-cover absolute mix-blend-overlay h-full lg:h-[860px] z-[-1]"
+          alt="Grace Solution showcasing wire harness"
+          className="w-full h-full object-cover absolute"
         />
-        <div className="mx-auto w-full h-full bg-gradient-to-tr object-cover mix-blend overlay relative ">
-          {/* Text and images */}
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-gray-800 via-gray-700 to-gray-600 opacity-70"></div>
 
-          <div className="flex flex-col xl:flex-row justify-between w-full opacity-200  ">
-            {/* text */}
-            <div className="border-2 lg:h-[480px] bg-gray-100 bg-opacity-40 z-0 rounded-lg shadow-lg bg-grad max-w-4xl px-8 py-6 lg:py-16 w-full md:mx-auto lg:ml-24 my-24  lg:px-auto">
-              <h1 className="lg:text-2xl text-xl uppercase font-extrabold text-[#27176A]  relative ">
-                Your Trusted Partner in Wire Harness and Cable Assembly
-                Solutions
-              </h1>
-              <br />
-              <h2 className="text-lg font-bold   ">
-                Precision Craftsmanship, Reliable Performance
-              </h2>
-              <br />
-              <br className="hidden lg:block" />
-              <p className="font-medium ">
-                For nearly two decades, Grace Solutions has been at the
-                forefront of precision engineering, delivering excellence in
-                Wire Harness and Cable Assembly solutions. Our unwavering
-                dedication to quality and innovation has earned us the trust of
-                our customers, making us a renowned leader in the industry.
-                Discover how our expertise can power your projects and elevate
-                your expectations.
-              </p>
-              <br />
-              <br />
-              <div className="flex justify-center items-center mx-auto gap-x-2 lg:justify-normal hover:bg-blue-300 hover:shadow-xl w-[160px] h-[50px] lg:mx-0 font-bold px-4 border border-white hover:border-transparent rounded-md cursor-pointer bg-white  lg:w-[180px]  sm:w-[180px]">
-                <BsWhatsapp className="text-green-400 text-2xl " />
-                <div className="flex justify-center items-center mx-auto ">
-                  Contact Us
-                </div>
-              </div>
+        {/* Content */}
+        <div className="container mx-auto flex flex-col xl:flex-row items-center justify-between w-full h-full px-4 md:px-8 relative">
+          {/* Text Section */}
+          <div className="bg-white bg-opacity-90 rounded-lg shadow-lg max-w-4xl p-6 lg:p-12 w-full lg:w-1/2 lg:ml-12 my-12 lg:my-24">
+            <h1 className="text-2xl lg:text-3xl uppercase font-extrabold text-[#27176A]">
+              Your Trusted Partner in Wire Harness and Cable Assembly Solutions
+            </h1>
+            <h2 className="mt-4 text-lg lg:text-xl font-bold text-gray-800">
+              Precision Craftsmanship, Reliable Performance
+            </h2>
+            <p className="mt-4 text-gray-700 leading-relaxed">
+              For over two decades, Grace Solutions has redefined precision
+              engineering, setting the gold standard in Wire Harness and Cable
+              Assembly solutions. Our relentless commitment to quality and
+              innovation has forged lasting partnerships, establishing us as a
+              trusted leader in the industry. Experience how our expertise can
+              drive your projects forward and exceed your highest expectations.
+            </p>
+            <div className="mt-8">
+              <a
+                href="https://wa.me/"
+                className="flex items-center justify-center gap-x-2 bg-[#25D366] text-white font-bold rounded-md px-4 py-2 shadow-lg hover:bg-[#1DAF54] transition w-48 mx-auto lg:mx-0"
+              >
+                <BsWhatsapp className="text-2xl" />
+                <span>Contact Us</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      {/* Stats */}
-      <section className="stats section sm:-my-20 xl:my-auto">
+
+      {/* Stats Section */}
+      <section className="bg-gray-50 py-12">
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row gap-y-6 justify-between">
-            <div className="flex-1 xl:border-r flex flex-col items-center">
-              <div className="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-800">
+            <div>
+              <div className="text-4xl md:text-[64px] font-semibold text-[#27176A]">
                 +300
               </div>
-              <div>Total Employees</div>
+              <div className="mt-2 text-sm md:text-base">Total Employees</div>
             </div>
-            <div className="flex-1 xl:border-r flex flex-col items-center">
-              <div className="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">
+            <div>
+              <div className="text-4xl md:text-[64px] font-semibold text-[#27176A]">
                 +150
               </div>
-              <div>High Quality Products</div>
+              <div className="mt-2 text-sm md:text-base">
+                High Quality Products
+              </div>
             </div>
-            <div className="flex-1 xl:border-r flex flex-col items-center">
-              <div className="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">
+            <div>
+              <div className="text-4xl md:text-[64px] font-semibold text-[#27176A]">
                 +6
               </div>
-              <div>Super Satisfied Customer</div>
+              <div className="mt-2 text-sm md:text-base">
+                Super Satisfied Customers
+              </div>
             </div>
-            <div className="flex-1 xl:border-r flex flex-col items-center">
-              <div className="text-4xl xl:text-[64px] font-semibold text-accent-tertiary xl:mb-2">
+            <div>
+              <div className="text-4xl md:text-[64px] font-semibold text-[#27176A]">
                 +18
               </div>
-              <div>Years of Experience in The Industry</div>
+              <div className="mt-2 text-sm md:text-base">
+                Years of Experience in The Industry
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* Product Desktop*/}
-      <section className="mx-auto  mt-16 sm:mt-32   lg:h-[650px] w-max ">
-        <div className="lg:flex hidden items-center  lg:h-[700px] justify-start  border-black shadow-3lg rounded-lg bg-gray-200   ">
-          <div className=" flex w-3/12 flex-col grow items-center justify-center mx-auto lg:gap-8  h-4/5 ">
-            <div className="self-center	justify-self-center	mx-auto text-center	">
-              <h1 className="lg:text-4xl text-xl font-bold underline">
-                Our Products
-              </h1>
-            </div>
-
-            <div className="justify-self-stretch mx-auto	text-center my-6 hidden lg:flex">
-              <h3 className="text-xl sm:text-lg ">
-                Here are the list of our products
-              </h3>
-            </div>
+      {/* Product Section */}
+      <section className="mx-auto mt-16 sm:mt-32 w-full lg:h-[700px]">
+        {/* Product Desktop View */}
+        <div className="hidden lg:flex items-center h-full justify-start shadow-lg rounded-lg bg-gray-200">
+          <div className="flex flex-col items-center justify-center w-3/12 h-4/5 mx-auto gap-8">
+            {/* Title */}
+            <h1 className="text-2xl lg:text-4xl font-bold underline text-center">
+              Our Products
+            </h1>
+            {/* Subtitle */}
+            <h3 className="text-lg text-center text-gray-700">
+              Here are the list of our products
+            </h3>
           </div>
-          {/* carousel */}
-          <div className="w-[70vw] h-[50vh] m-auto pr-10">
-            <Carousel className=" m-auto my-auto md:-my-6">
-              <div className="mx-auto my-auto h-[50vh] w-full m-auto ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:950px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div className="mx-auto my-auto h-[50vh] w-full  m-auto ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:750px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={300}
-                  height={300}
-                />
-              </div>
-              <div className="mx-auto my-auto h-[50vh] w-full  m-auto ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:750px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={300}
-                  height={300}
-                />
-              </div>
-              <div className="mx-auto my-auto h-[50vh] w-full m-auto ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:750px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={300}
-                  height={300}
-                />
-              </div>
+          {/* Carousel */}
+          <div className="w-[70vw] h-[50vh] pr-10">
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showThumbs={false}
+              showArrows
+              interval={3000}
+              className="h-[50vh] w-[70vw] mx-auto"
+            >
+              {["green-cable.jpg", "red-cable.jpg", "blue-cable.jpg"].map(
+                (image, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center justify-center h-full w-full"
+                  >
+                    <Image
+                      src={`./Image/${image}`}
+                      alt={`Product ${idx + 1} - Grace Solutions`}
+                      width={800} // Dynamically adjust width
+                      height={500} // Dynamically adjust height
+                      sizes="(max-width:950px) 100vw, 800px"
+                      className="object-contain h-full w-full max-w-[70vw] max-h-[50vh] mx-auto" // Ensures proportional scaling
+                      priority={idx === 0} // Prioritize first image
+                    />
+                  </div>
+                )
+              )}
             </Carousel>
           </div>
         </div>
-        {/* Product Phone*/}
-        <div className="lg:hidden   border-black shadow-3lg rounded-lg bg-gray-200 w-screen mx-auto h-4/12 my-auto ">
-          <div className="  lg:hidden w-8/12 lg:flex-row grow items-center justify-center mx-auto my-auto h-12 ">
-            <div className="self-center	justify-self-center	mx-auto text-center my-auto	 pt-5">
-              <h1 className="lg:text-4xl text-2xl font-bold underline">
-                Our Products
-              </h1>
-            </div>
 
-            <div className="justify-self-stretch mx-auto	text-center my-6 hidden lg:flex">
-              <h3 className="text-xl sm:text-lg ">
-                Here are the list of our products
-              </h3>
-            </div>
+        {/* Product Mobile View */}
+        <div className="lg:hidden bg-gray-200 shadow-lg rounded-lg w-full mx-auto my-8 py-5">
+          <div className="text-center">
+            {/* Title */}
+            <h1 className="text-2xl font-bold underline">Our Products</h1>
           </div>
-          {/* carousel */}
-          <div className=" m-auto w-11/12 mt-3 lg:mt-8 ">
-            <Carousel className=" m-auto  ">
-              <div className="mx-auto   w-full  ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:950px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div className="mx-auto my-auto h-[50vh] w-full  m-auto ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:750px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div className="mx-auto my-auto h-[50vh] w-full  m-auto ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:750px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={300}
-                  height={300}
-                />
-              </div>
-              <div className="mx-auto my-auto h-[50vh] w-full m-auto ">
-                <Image
-                  className="mx-auto image-wrapper"
-                  src="./Image/green-cable.jpg"
-                  sizes="(max-width:750px) 100vw,700px"
-                  alt={"Grace Solution Logo"}
-                  width={300}
-                  height={300}
-                />
-              </div>
+          <div className="w-11/12 mx-auto mt-4">
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showThumbs={false}
+              showArrows
+              interval={3000}
+              className="h-full"
+            >
+              {["green-cable.jpg", "red-cable.jpg", "blue-cable.jpg"].map(
+                (image, idx) => (
+                  <div
+                    key={idx}
+                    className="h-full flex items-center justify-center"
+                  >
+                    <Image
+                      src={`./Image/${image}`}
+                      alt={`Product ${idx + 1} - Grace Solutions`}
+                      width={400}
+                      height={400}
+                      sizes="(max-width:950px) 100vw, 700px"
+                      className="mx-auto"
+                      loading="lazy" // Lazy-load all images
+                    />
+                  </div>
+                )
+              )}
             </Carousel>
           </div>
         </div>
       </section>
+
       {/* Service */}
-      <section className="mx-auto mt-12 lg:mt-32 w-11/5   ">
-        <div>
-          {/* Service Header */}
-          <div className="mx-auto">
-            <h1 className="mx-auto my-auto text-center text-2xl md:text-2xl font-bold underline ">
-              Our Services
-            </h1>
-          </div>
-          {/* Service card display */}
-          <div className="flex items-start justify-start  container m-auto my-4 w-full ">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto xl:gap-24 md:gap-4">
-              {/* Card 1 */}
-              <div className="rounded-xl shadow-lg card h-full ">
-                <div className="p-5 flex flex-col">
-                  <Image
-                    className="mx-auto rounded-xl  "
-                    src="./Image/fix_size/rsz_wire_harness_3.png"
-                    sizes="(max-width:200px) 100vw,700px"
-                    alt={"Grace Solution Logo"}
-                    width={300}
-                    height={150}
-                  />
 
-                  <h5 className="text-2xl  font-medium mt-3 mx-auto">
-                    Wire Harness
-                  </h5>
-                  <p className="text-slate-500 text-md lg:text-lg mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quia sequi ea, amet aperiam harum laudantium earum placeat
-                    ullam rerum unde neque modi laboriosam error magni?
-                    Repellendus similique cupiditate vel quaerat.
-                  </p>
+      <section className="mx-auto mt-12 lg:mt-32 w-full px-4">
+        {/* Service Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold underline">Our Services</h1>
+        </div>
 
-                  <button
-                    type="button"
-                    className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                  >
-                    <Link href="" className="">
-                      Explore more
-                    </Link>
-                  </button>
+        {/* Service Cards */}
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Card 1 */}
+            <div className="rounded-xl shadow-xl hover:shadow-2xl transition overflow-hidden bg-white flex flex-col items-center">
+              <Image
+                className="rounded-t-xl"
+                src="./Image/fix_size/rsz_wire_harness_3.png"
+                sizes="(max-width:300px) 100vw, 300px"
+                alt="Wire Harness Service"
+                width={300}
+                height={200}
+              />
+              <div className="p-6">
+                <h5 className="text-xl font-semibold mt-4 text-center">
+                  Wire Harness
+                </h5>
+                <p className="text-gray-600 text-sm mt-3 px-4 text-center">
+                  We provide precise and reliable wire harness solutions for a
+                  variety of industries, ensuring optimal performance and
+                  quality.
+                </p>
+                <div className="mt-6 text-center">
+                  <Link href="">
+                    <button
+                      type="button"
+                      className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition"
+                    >
+                      Explore More
+                    </button>
+                  </Link>
                 </div>
               </div>
-              {/* Card 2 */}
+            </div>
 
-              <div className="rounded-xl shadow-lg card ">
-                <div className="p-5 flex flex-col">
-                  <Image
-                    className="mx-auto rounded-xl wha"
-                    src="./Image/fix_size/rsz_insert_molding.jpg"
-                    sizes="(max-width:950px) 100vw,700px"
-                    alt={"Grace Solution Logo"}
-                    width={400}
-                    height={400}
-                  />
-                  <h5 className="text-2xl  font-medium mt-3 mx-auto">
-                    Insert Molding
-                  </h5>
-                  <p className="text-slate-500 text-md lg:text-lg  mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quia sequi ea, amet aperiam harum laudantium earum placeat
-                    ullam rerum unde neque modi laboriosam error magni?
-                    Repellendus similique cupiditate vel quaerat.
-                  </p>
-                  <button
-                    type="button"
-                    className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                  >
-                    <Link href="" className="">
-                      Explore more
-                    </Link>
-                  </button>
+            {/* Card 2 */}
+            <div className="rounded-xl shadow-xl hover:shadow-2xl transition overflow-hidden bg-white flex flex-col items-center">
+              <Image
+                className="rounded-t-xl"
+                src="./Image/fix_size/rsz_insert_molding.jpg"
+                sizes="(max-width:300px) 100vw, 300px"
+                alt="Insert Molding Service"
+                width={300}
+                height={200}
+              />
+              <div className="p-6">
+                <h5 className="text-xl font-semibold mt-4 text-center">
+                  Insert Molding
+                </h5>
+                <p className="text-gray-600 text-sm mt-3 px-4 text-center">
+                  Expertly crafted insert molding solutions tailored to meet
+                  your specific project requirements and industry standards.
+                </p>
+                <div className="mt-6 text-center">
+                  <Link href="">
+                    <button
+                      type="button"
+                      className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition"
+                    >
+                      Explore More
+                    </button>
+                  </Link>
                 </div>
               </div>
-              {/* Card 3 */}
+            </div>
 
-              <div className="rounded-xl shadow-lg card ">
-                <div className="p-5 flex flex-col">
-                  <Image
-                    className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="./Image/tooling_pabrication.jpeg"
-                    sizes="(max-width:950px) 100vw,700px"
-                    alt={"Grace Solution Logo"}
-                    width={400}
-                    height={400}
-                  />
-                  <div className="whitespace-nowrap	  w-24">
-                    <h5 className="text-2xl md:text-2xl font-medium mt-3 mx-auto ">
-                      Tooling Pabrication
-                    </h5>
-                  </div>
-
-                  <p className="text-slate-500 text-md lg:text-lg mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quia sequi ea, amet aperiam harum laudantium earum placeat
-                    ullam rerum unde neque modi laboriosam error magni?
-                    Repellendus similique cupiditate vel quaerat.
-                  </p>
-                  <button
-                    type="button"
-                    className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                  >
-                    <Link href="" className="">
-                      Explore more
-                    </Link>
-                  </button>
+            {/* Card 3 */}
+            <div className="rounded-xl shadow-xl hover:shadow-2xl transition overflow-hidden bg-white flex flex-col items-center">
+              <Image
+                className="rounded-t-xl"
+                src="./Image/tooling_pabrication.jpeg"
+                sizes="(max-width:300px) 100vw, 300px"
+                alt="Tooling Fabrication Service"
+                width={300}
+                height={200}
+              />
+              <div className="p-6">
+                <h5 className="text-xl font-semibold mt-4 text-center">
+                  Tooling Fabrication
+                </h5>
+                <p className="text-gray-600 text-sm mt-3 px-4 text-center">
+                  High-quality tooling fabrication services to ensure precision
+                  and efficiency in manufacturing processes.
+                </p>
+                <div className="mt-6 text-center">
+                  <Link href="">
+                    <button
+                      type="button"
+                      className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition"
+                    >
+                      Explore More
+                    </button>
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              <div className="rounded-xl shadow-lg card ">
-                <div className="p-5 flex flex-col">
-                  <Image
-                    className="mx-auto rounded-xl shadow-lg overflow-hidden"
-                    src="./Image/fix_size/rsz_warehouse.jpg"
-                    sizes="(max-width:950px) 100vw,700px"
-                    alt={"Grace Solution Logo"}
-                    width={300}
-                    height={500}
-                  />
-                  <h5 className="text-2xl md:text-2xl font-medium mt-3 mx-auto">
-                    Warehouse
-                  </h5>
-                  <p className="text-slate-500 text-md lg:text-lg mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quia sequi ea, amet aperiam harum laudantium earum placeat
-                    ullam rerum unde neque modi laboriosam error magni?
-                    Repellendus similique cupiditate vel quaerat.
-                  </p>
-                  <button
-                    type="button"
-                    className="text-white   md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                  >
-                    <Link href="" className="">
-                      Explore more
-                    </Link>
-                  </button>
+            {/* Card 4 */}
+            <div className="rounded-xl shadow-xl hover:shadow-2xl transition overflow-hidden bg-white flex flex-col items-center">
+              <Image
+                className="rounded-t-xl"
+                src="./Image/fix_size/rsz_warehouse.jpg"
+                sizes="(max-width:300px) 100vw, 300px"
+                alt="Warehouse Service"
+                width={300}
+                height={200}
+              />
+              <div className="p-6">
+                <h5 className="text-xl font-semibold mt-4 text-center">
+                  Warehouse
+                </h5>
+                <p className="text-gray-600 text-sm mt-3 px-4 text-center">
+                  Comprehensive warehousing solutions to optimize your supply
+                  chain and inventory management processes.
+                </p>
+                <div className="mt-6 text-center">
+                  <Link href="">
+                    <button
+                      type="button"
+                      className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition"
+                    >
+                      Explore More
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -372,82 +336,143 @@ export default function Home() {
       </section>
 
       {/* Why Grace Solutions */}
+
+      {/* Testing */}
+
       <section>
         <div className="flex flex-col items-center justify-center mb-5 mt-10">
-          <div className="ml-3/12 lg:mt-3 md:mt-12 xl:px-60 sm:px-10 w-full my-2 mx-auto flex justify-center items-center">
-            <div className="bg-gray-200 flex flex-col flex-grow rounded-lg p-2   border-black shadow-3lg ">
-              <h1 className="font-bold text-2xl underline mx-auto mt-3 mb-8">
-                Why We Are One of The Market Leader
-              </h1>
-
-              <div className="flex md:flex-row flex-col">
-                <div className=" m-auto ">
-                  <ul className="flex-row flex whitespace-nowrap  gap-10">
-                    <div className=" md:w-5/12 w-10/12	">
-                      <li className="mx-auto my-2 text-sm ,md:text-md ">
-                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
-                          <BsBuildingFillGear />
-                        </div>
-                        Great Infrastructure
-                      </li>
-
-                      <li className="mx-auto my-2 text-sm ,md:text-md ">
-                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
-                          <FaShippingFast />
-                        </div>
-                        24 Hours Delivery Service
-                      </li>
-                      <li className="mx-auto my-2 text-sm ,md:text-md ">
-                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
-                          <FaHelicopter />
-                        </div>
-                        Air Delivery Service
-                      </li>
-                    </div>
-
-                    <div className=" w-5/12">
-                      <li className="mx-auto my-2 text-sm ,md:text-md ">
-                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
-                          <IoIosTimer />
-                        </div>
-                        Just In Time Service
-                      </li>
-
-                      <li className="mx-auto my-2 text-sm ,md:text-md ">
-                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
-                          <MdOutlinePriceCheck />
-                        </div>
-                        Competitive Pricing
-                      </li>
-                      <li className="mx-auto my-2 text-sm ,md:text-md ">
-                        <div className="mx-auto md:w-6/12 text-md md:text-2xl ">
-                          <TbCertificate />
-                        </div>
-                        Certified with Industry Standards
-                      </li>
-                    </div>
-                  </ul>
+          <div className="ml-2/12 lg:mt-3 md:mt-12 xl:px-44 sm:px-10 w-full my-2 mx-auto flex justify-center items-center">
+            <div className="bg-gray-200 flex flex-col flex-grow rounded-lg p-5  border-black shadow-3lg ">
+              <div className="flex flex-col md:flex-row w-full  ">
+                {/* Left Div - Takes 9/12 (75%) on desktop, full width on mobile */}
+                <div className="w-full md:w-9/12 bg-gray-200 p-3 ">
+                  <h1 className="text-2xl md:text-3xl font-semibold  md:mx-auto text-center xl:text-left ">
+                    <span className="underline">GRACE SOLUTIONS:</span> Your
+                    Dependable Partner for Success
+                  </h1>
                 </div>
-                <div className="m-auto p-2 w-4/12 md:w-5/12">
-                  <Image
-                    className="mx-auto "
-                    src="./Image/CompanyPic.jpg"
-                    sizes="(max-width:950px) 100vw,700px"
-                    alt={"Grace Solution Logo"}
-                    width={350}
-                    height={350}
-                  />
+
+                {/* Right Div - Takes 3/12 (25%) on desktop, full width on mobile */}
+                <div className="w-full md:w-3/12 flex items-center justify-center mt-4 md:mt-0">
+                  <button className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                    More About Us
+                    <span>
+                      <BsArrowRightCircle />
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <p className="text-sm md:text-md p-3 text-center">
+                Delivering Excellence Through Innovation, Service, and Quality.
+              </p>
+
+              <div className="bg-gray-100 p-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 text-center grid grid-cols-1">
+                    <h2 className=" text-center mx-auto p-1 text-2xl">
+                      <BsBuildingFillGear />
+                    </h2>
+
+                    <h3 className="mb-2 font-semibold text-lg text-gray-800">
+                      Advanced Manufacturing Infrastructure
+                    </h3>
+                    <h2></h2>
+                    <p className="text-gray-600 textmd">
+                      Located in the prestigious Batamindo Industrial Park, we
+                      operate with stable utilities, secure facilities, and
+                      world-class infrastructure designed to meet your
+                      production needs.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 text-center grid grid-cols-1">
+                    <h2 className=" text-center mx-auto p-1 text-2xl">
+                      <FaShippingFast />
+                    </h2>
+                    <h3 className="mb-2 font-semibold text-lg text-gray-800">
+                      24/7 Delivery Service
+                    </h3>
+                    <p className="text-gray-600">
+                      Our commitment to speed ensures your supply chain never
+                      misses a beat. With 24-hour delivery options, your
+                      deadlines are always met.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 text-center grid grid-cols-1">
+                    <h2 className=" text-center mx-auto p-1 text-2xl">
+                      <IoIosTimer />
+                    </h2>
+                    <h3 className="mb-2 font-semibold text-lg text-gray-800">
+                      Just-In-Time Services
+                    </h3>
+                    <p className="text-gray-600">
+                      Optimizing your production schedule is our priority. Our
+                      JIT solutions are tailored to minimize waste and maximize
+                      efficiency.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 text-center grid grid-cols-1">
+                    <h2 className=" text-center mx-auto p-1 text-2xl">
+                      <FaHelicopter />
+                    </h2>
+                    <h3 className="mb-2 font-semibold text-lg text-gray-800">
+                      Air Freight for Urgent Deliveries
+                    </h3>
+                    <p className="text-gray-600">
+                      Need it fast? Our air delivery services cater to your most
+                      time-sensitive projects with efficiency and precision.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 text-center grid grid-cols-1">
+                    <h2 className=" text-center mx-auto p-1 text-2xl">
+                      <MdOutlinePriceCheck />
+                    </h2>
+                    <h3 className="mb-2 font-semibold text-lg text-gray-800">
+                      Competitive Pricing
+                    </h3>
+                    <p className="text-gray-600">
+                      High-quality manufacturing doesn’t have to break the bank.
+                      Our competitive pricing delivers unmatched value without
+                      compromising quality.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-300 text-center grid grid-cols-1">
+                    <h2 className=" text-center mx-auto p-1 text-2xl">
+                      <TbCertificate />
+                    </h2>
+                    <h3 className="mb-2 font-semibold text-lg text-gray-800">
+                      Certified Excellence
+                    </h3>
+                    <p className="text-gray-600">
+                      With ISO9001:2015 and UL certifications, we uphold the
+                      highest standards in every product we deliver.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className=" xl:my-auto m-auto  ">
+
+      {/* // */}
+      <section className=" xl:my-auto m-auto pt-5 ">
         <div className="container mx-auto">
+          <div>
+            <div className="flex items-center justify-center my-4">
+              {/* Left Line */}
+              <div className="flex-grow border-t border-gray-300"></div>
+
+              {/* Text */}
+              <span className="mx-4 text-gray-600 font-medium">Trusted By</span>
+
+              {/* Right Line */}
+              <div className="flex-grow border-t border-gray-300"></div>
+            </div>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
             <Image
-              className="mx-auto "
+              className="mx-auto  "
               src="./Image/logo/oriex.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
@@ -494,6 +519,17 @@ export default function Home() {
               width={200}
               height={200}
             />
+          </div>
+          <div>
+            <div className="flex items-center justify-center my-4">
+              {/* Left Line */}
+              <div className="flex-grow border-t border-gray-300"></div>
+
+              {/* Text */}
+
+              {/* Right Line */}
+              <div className="flex-grow border-t border-gray-300"></div>
+            </div>
           </div>
         </div>
       </section>

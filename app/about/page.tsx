@@ -1,6 +1,14 @@
 "use client";
+import { motion } from "framer-motion";
 import { Chrono } from "react-chrono";
-import { IoLocationOutline } from "react-icons/io5";
+import {
+  FaMedal,
+  FaGlobe,
+  FaUsers,
+  FaBullseye,
+  FaLightbulb,
+  FaHandshake,
+} from "react-icons/fa";
 import Image from "next/image";
 
 export default function About() {
@@ -8,233 +16,201 @@ export default function About() {
     {
       title: "2005",
       cardTitle: "Start of the journey",
-      media: {
-        type: "IMAGE",
-        source: {
-          name: "dunkirk beach",
-          url: "./Image/green-cable.jpg",
-        },
-      },
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
     {
       title: "2010",
-      cardTitle: "Expand business fabrication  for jig and ficture tooling.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
+      cardTitle: "Expanded to fabrication for jig and fixture tooling.",
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
-
     {
-      title: " 2012",
+      title: "2012",
       cardTitle:
-        "Moved to Lytech Industrial Park and Expand to 3 lots Factories and praparing for ISO 9001-2008  certification.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
+        "Expanded to 3 factories and prepared for ISO 9001-2008 certification.",
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
     {
-      title: " 2013",
-      cardTitle: "Attained ISO 9001:2008 and expanding to international market",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
+      title: "2013",
+      cardTitle: "Attained ISO 9001:2008 and expanded internationally.",
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
     {
-      title: " 2015",
+      title: "2015",
       cardTitle:
-        "Expanded one building for Wire Assembly at Batamindo Industrial Park ",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
+        "Expanded one building for Wire Assembly at Batamindo Industrial Park.",
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
     {
-      title: " 2018",
+      title: "2018",
       cardTitle:
-        "Expanded four building for Wire Assembly at Batamindo Industrial Park and attained ISO 9001:2015 Certificate ",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
+        "Expanded four buildings, achieved ISO 9001:2015, and grew to 8000m².",
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
     {
-      title: " 2018",
-      cardTitle:
-        "Expanded factory area to 8000_m2 and reached sales revenue USD 5.0 Millions/Year.",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
-    },
-    {
-      title: " 2023",
-      cardTitle:
-        "We employed of 300 skilled individuals, each proficient in their respective roles, ensuring the assurance of product quality. Our objective is to evolve into a company that excels in delivering top-notch cable solutions through the meticulous management of QCDS (Quality, Cost, Delivery, and Services).",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
+      title: "2023",
+      cardTitle: "300 skilled employees and continuous growth.",
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
     {
       title: "Present",
-      cardTitle: "We are stil growing and expanding",
-      media: {
-        type: "IMAGE",
-        source: {
-          url: "./Image/green-cable.jpg",
-        },
-      },
+      cardTitle: "Continuing to grow and innovate.",
+      media: { source: { url: "./Image/green-cable.jpg" } },
     },
   ];
+
   return (
-    <main className="lg:pt-12 xl:pb-0 w-full lg:-my-4 ">
-      <div className="mx-auto text-4xl flex items-center justify-center mt-5 font-semibold underline">
-        About Us
-      </div>
-      <div className=" w-8/12 flex flex-col justify-center mx-auto">
-        <div className="flex flex-col justify-center ">
-          <h1 className="font-bold text-2xl font-montserrat text-blue-400">
-            Industry Leader
-          </h1>
-          <div className="flex flex-col justify-center items-center mx-auto p-10">
-            <p className=" ">
-              Established in 2005, PT Grace Solutions is a privately held
-              company based in Batam, Indonesia. Our primary focus lies in the
-              custom cable harness industry, along with cable and control panel
-              assemblies catering to various sectors such as off-road equipment,
-              emergency services, heavy-duty trucks, communications, specialty
-              electronics, and industrial applications.
-            </p>
-          </div>
+    <main className="bg-gray-50 text-gray-800">
+      {/* Hero Section */}
+      <motion.div
+        className="bg-blue-500 text-white py-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl font-bold">About Us</h1>
+          <p className="mt-4 text-lg">
+            PT. Grace Solution: Your Trusted Partner in Cable & Wire Harness
+            Manufacturing.
+          </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className=" w-8/12 flex flex-col justify-center mx-auto">
-        <div className="flex flex-col justify-center ">
-          <h1 className="font-bold text-2xl font-montserrat text-blue-400">
-            Recognized Experts in Electrical Harnesses and Cables
-          </h1>
-          <div className="flex flex-col justify-center items-center mx-auto p-10">
-            <p className=" ">
-              Our dedication to ongoing enhancement alongside our customers has
-              facilitated our continuous growth, establishing us as a valued
-              supply partner. Grace Solution consistently stands out as the top
-              Cable Harness solution in the industry. The accolades underscore
-              our commitment to teamwork and unwavering customer focus,
-              positioning these values as our key strategies for success in
-              serving our customers.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className=" w-8/12 flex flex-col justify-center mx-auto">
-        <div className="flex flex-col justify-center ">
-          <h1 className="font-bold text-2xl font-montserrat text-blue-400">
-            Comply with International Industry Standard
-          </h1>
-          <div className="flex flex-col justify-center items-center mx-auto p-10">
-            <p className=" ">
-              The acquisition of both ISO 9001:2015 and UL817 certifications in
-              the cable industry underscores our unwavering dedication to
-              upholding the highest standards of quality and safety. Our ISO
-              9001:2015 certification reflects our commitment to robust quality
-              management systems, ensuring our products consistently surpass
-              global benchmarks. Concurrently, the UL817 certification,
-              governing cord sets and power supply cords, showcases our
-              dedication to product safety and compliance with industry
-              regulations. At Grace Solution, these certifications signify more
-              than just accolades; they embody our profound commitment to
-              delivering cable solutions prioritizing quality, reliability, and
-              safety. Proudly affirming our industry leadership, we take immense
-              pride in providing customers with innovative cable products
-              adhering to the utmost quality and safety standards.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* vision mission, https://powr2.com/about/ */}
-      <div className="flex flex-col bg-blue-300 w-9/12 mx-auto h-5/12 items-center justify-center p-8 m-auto rounded-md">
-        <div className="flex flex-row mx-auto p-3 mb-8 my-auto">
-          <div className="w-8/12">
-            <h1 className="text-xl font-bold">Grace Solutions</h1>
-            <h2 className="text-xl font-bold text-yellow-200 my-2 underline">
-              Wire Excellence, Seamless Connections.
+      {/* About Company */}
+      <section className="container mx-auto py-12 px-6 lg:px-20">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div>
+            <h2 className="text-3xl font-bold text-blue-500 mb-4">
+              Industry Leader in Wire Harness Solutions
             </h2>
-            <p className="text-m font-semibold my-4">
-              Pioneering excellence in the wire harness industry, our company is
-              synonymous with precision and reliability. With a commitment to
-              innovation, we craft cutting-edge wire harness solutions, setting
-              industry benchmarks for quality and performance.
+            <p className="text-lg leading-relaxed">
+              Established in 2005, PT. Grace Solution specializes in wire
+              harness and cable assemblies for various sectors including
+              off-road equipment, emergency services, heavy-duty trucks,
+              communications, specialty electronics, and industrial
+              applications. With a commitment to quality and innovation, we have
+              expanded to over 8000m² and employ a skilled workforce dedicated
+              to excellence.
             </p>
           </div>
-          <div className="w-4/12 flex flex-col items-center justify-center ml-10">
-            <Image
-              className="mx-auto  shadow-lg overflow-hidden rounded-l"
-              src="./Image/green-cable.jpg"
-              sizes="(max-width:950px) 100vw,700px"
-              alt={"Grace Solution Logo"}
-              width={400}
-              height={400}
-            />
-          </div>
-        </div>
+          <Image
+            src="./Image/green-cable.jpg"
+            alt="Industry Leader"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-lg"
+          />
+        </motion.div>
+      </section>
 
-        <div className="flex flex-row mx-auto h-5/12 items-center justify-around">
-          <div className="flex flex-col h-3/12 w-3/12 bg-white items-center justify-around p-3 rounded-xl">
-            <h2 className="font-bold">Our Mission</h2>
-            <p>
-              To provide emission-free portable power solutions that enable
-              companies to meet their sustainability goals.
-            </p>
-          </div>
-          <div className="flex flex-col h-3/12 w-3/12 bg-white items-center justify-around p-3 rounded-xl ">
-            <h2 className="font-bold">Our Vision</h2>
-            <p>
-              To provide emission-free portable power solutions that enable
-              companies to meet their sustainability goals.
-            </p>
-          </div>
-          <div className="flex flex-col h-3/12 w-3/12 bg-white items-center justify-around p-3 rounded-xl">
-            <h2 className="font-bold">Our Promise</h2>
-            <p>
-              To provide emission-free portable power solutions that enable
-              companies to meet their sustainability goals.
-            </p>
-          </div>
+      {/* Achievements */}
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto px-6 lg:px-20">
+          <h2 className="text-3xl font-bold text-center text-blue-500 mb-8">
+            Our Achievements
+          </h2>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+              <FaMedal className="text-blue-500 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4">ISO Certified</h3>
+              <p>
+                We proudly hold ISO 9001:2015 and UL817 certifications, ensuring
+                our dedication to quality and safety.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+              <FaGlobe className="text-blue-500 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4">Global Expansion</h3>
+              <p>
+                Serving international markets with a state-of-the-art factory
+                space of 8000m² and growing.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+              <FaUsers className="text-blue-500 text-4xl mb-4" />
+              <h3 className="text-xl font-semibold mb-4">Skilled Workforce</h3>
+              <p>
+                Employing 300 skilled individuals committed to quality, cost,
+                delivery, and service excellence.
+              </p>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* timeline */}
-      <div className="mx-auto flex flex-col justify-center items-center">
-        <div style={{ height: "700px", width: "700px" }}>
+      {/* Mission, Vision, Promise */}
+      <section className="bg-blue-500 text-white py-12">
+        <motion.div
+          className="container mx-auto text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-3xl font-bold mb-8">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-blue-600 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+              <FaBullseye className="text-yellow-400 text-4xl mb-4" />
+              <h3 className="text-xl font-bold mb-4">Our Mission</h3>
+              <p>
+                To deliver innovative and reliable wire harness solutions for a
+                sustainable future.
+              </p>
+            </div>
+            <div className="bg-blue-600 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+              <FaLightbulb className="text-yellow-400 text-4xl mb-4" />
+              <h3 className="text-xl font-bold mb-4">Our Vision</h3>
+              <p>
+                To lead the industry with cutting-edge technology and unmatched
+                customer focus.
+              </p>
+            </div>
+            <div className="bg-blue-600 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+              <FaHandshake className="text-yellow-400 text-4xl mb-4" />
+              <h3 className="text-xl font-bold mb-4">Our Promise</h3>
+              <p>
+                To ensure seamless connections and superior quality in every
+                solution we provide.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Timeline */}
+      <section className="container mx-auto py-12 px-6 lg:px-20">
+        <h2 className="text-3xl font-bold text-center text-blue-500 mb-8">
+          Our Journey
+        </h2>
+        <motion.div
+          className="w-full overflow-x-hidden"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <Chrono
             items={items}
             mode="VERTICAL"
-            showAllCardsHorizontal
-            cardWidth={450}
-            cardHeight={300}
-            allowDynamicUpdate={{ allowDynamicUpdate: true }}
+            theme={{
+              primary: "blue",
+              secondary: "gray",
+              cardBgColor: "white",
+              cardForeColor: "black",
+            }}
           />
-        </div>
-      </div>
+        </motion.div>
+      </section>
     </main>
   );
 }

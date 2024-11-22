@@ -4,167 +4,99 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <main className="lg:pt-12 xl:pb-0 w-full lg:-my-4 ">
-      <div className="mx-auto text-4xl flex items-center justify-center mb-3 lg:mt-5 font-semibold underline">
+    <main className="lg:pt-12 xl:pb-0 w-full">
+      {/* Page Header */}
+      <div className="mx-auto text-4xl font-semibold underline flex items-center justify-center mb-8">
         Services
       </div>
-      {/* left */}
-      <div className="ml-3/12 lg:mt-3 md:mt-12 xl:px-60 sm:px-10 xl:w-10/12  mx-auto flex justify-center items-center">
-        <div className="bg-gray-300 xl:w-9/12   xl:h-80 flex flex-row flex-grow rounded-lg ">
-          <div className=" w-9/12 md:m-5 md:p-8 p-4 ">
-            <h2 className="lg:text-2xl text-xl font-bold">WIRE HARNESS</h2>
-            <br />
-            <br className="hidden lg:block" />
 
-            <p className="xl:mt-2 text-md">
-              Our wire harness is crafted with precision and using top-quality
-              materials. Rigorous testing and innovative design set us apart,
-              making our harness the best choice for seamless and efficient
-              electrical connectivity in any application.
-            </p>
-
-            <button
-              type="button"
-              className="text-white md:mt-10 mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            >
-              <Link href="/services/wireHarness"> Find More Information </Link>
-            </button>
-          </div>
-
-          <div className="flex flex-col  md:p-10 flex-grow-0 lg:w-3/12 w-4/12 justify-center items-top">
-            <Image
-              className="mx-auto rounded-xl  "
-              src="./Image/wire_harness_2.png"
-              sizes="(max-width:200px) 100vw,700px"
-              alt={"Grace Solution Logo"}
-              width={300}
-              height={150}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* right */}
-      <div className="ml-3/12 lg:mt-3 md:mt-12 xl:px-60 sm:px-10 xl:w-10/12 my-2 mx-auto flex justify-center items-center">
-        <div className="bg-gray-300 xl:w-9/12   xl:h-80 flex flex-row flex-grow rounded-lg ">
-          <div className=" flex flex-col  md:p-10 flex-grow-0 lg:w-3/12 w-4/12 justify-center items-top ">
-            <Image
-              className="mx-auto rounded-xl  "
-              src="./Image/insert_molding_2.png"
-              sizes="(max-width:20px) 100vw,70px"
-              alt={"Grace Solution Logo"}
-              width={600}
-              height={500}
-            />
-          </div>
-          <div className=" w-9/12 md:m-5 md:p-8 p-4">
-            <div>
-              <h2 className="lg:text-2xl text-xl font-bold">Insert Molding</h2>
+      {/* Service Sections */}
+      <div className="container mx-auto px-4 xl:px-60">
+        {[
+          {
+            title: "Wire Harness",
+            description:
+              "Our wire harness is crafted with precision and using top-quality materials. Rigorous testing and innovative design set us apart, making our harness the best choice for seamless and efficient electrical connectivity in any application.",
+            image: "/Image/optimized/wire_harness_2.webp",
+            link: "/services/wireHarness",
+          },
+          {
+            title: "Insert Molding",
+            description:
+              "Our insert molding stands out for its precision engineering, seamless integration of components, and superior material quality. Meticulous attention to detail ensures optimal performance, making our insert molding the industry's top choice for reliability and durability.",
+            image: "/Image/optimized/insert_molding.webp",
+            link: "/services/insertMolding",
+          },
+          {
+            title: "Tooling Fabrication",
+            description:
+              "Our tooling fabrication excels with cutting-edge technology, precision craftsmanship, and a commitment to quality. We deliver top-notch tooling solutions that set industry benchmarks for reliability, durability, and innovation.",
+            image: "/Image/optimized/tooling_fabrication.webp",
+            link: "/services/toolingFabrication",
+          },
+          {
+            title: "Warehouse and Logistics",
+            description:
+              "We offer comprehensive warehousing and logistics solutions, ensuring efficient inventory management, seamless operations, and timely deliveries tailored to your business needs.",
+            image: "/Image/optimized/warehouse.webp",
+            link: "/services/warehouse",
+          },
+        ].map((service, index) => (
+          <div
+            key={index}
+            className={`flex flex-col lg:flex-row items-center bg-gray-300 rounded-lg shadow-lg mb-8 xl:h-80 ${
+              index % 2 === 0 ? "lg:flex-row-reverse" : ""
+            }`}
+          >
+            {/* Image Section */}
+            <div className="lg:w-4/12 flex justify-center items-center p-6">
+              <Image
+                className="rounded-lg"
+                src={service.image}
+                alt={`${service.title} Service`}
+                layout="responsive"
+                width={400}
+                height={300}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority={index === 0} // Prioritize the first image
+              />
             </div>
 
-            <br />
-            <br className="hidden lg:block" />
-
-            <div className="lg:mb-1 mb-3">
-              <p className="xl:mt-2 text-md">
-                Our insert molding stands out for its precision engineering,
-                seamless integration of components, and superior material
-                quality. Meticulous attention to detail ensures optimal
-                performance, making our insert molding the industry top choice
-                for reliability and durability.
+            {/* Text Section */}
+            <div className="lg:w-8/12 p-6">
+              <h2 className="text-2xl font-bold mb-4">{service.title}</h2>
+              <p className="text-gray-700 text-md leading-relaxed mb-6">
+                {service.description}
               </p>
+              <Link href={service.link}>
+                <button
+                  type="button"
+                  className="bg-blue-700 text-white py-2 px-6 rounded-lg hover:bg-blue-800 transition focus:ring-4 focus:ring-blue-300"
+                >
+                  Find More Information
+                </button>
+              </Link>
             </div>
-
-            <button
-              type="button"
-              className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            >
-              Find More Information
-            </button>
           </div>
-        </div>
-      </div>
-      {/* left */}
-      <div className="ml-3/12 lg:mt-3 md:mt-12 xl:px-60 sm:px-10 xl:w-10/12  mx-auto flex justify-center items-center">
-        <div className="bg-gray-300 xl:w-9/12   xl:h-80 flex flex-row flex-grow rounded-lg ">
-          <div className=" w-9/12 md:m-5 md:p-8 p-4 ">
-            <h2 className="lg:text-2xl text-xl font-bold ">
-              TOOLING PABRICATION
-            </h2>
-            <br />
-            <br className="hidden lg:block" />
-
-            <p className="xl:mt-2 text-md">
-              Our tooling fabrication excels with cutting-edge technology,
-              precision craftsmanship, and a commitment to quality. We deliver
-              top-notch tooling solutions that set industry benchmarks for
-              reliability, durability, and innovation.
-            </p>
-
-            <button
-              type="button"
-              className="text-white md:mt-10 mt-4 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            >
-              <Link href="/services/wireHarness"> Find More Information </Link>
-            </button>
-          </div>
-
-          <div className="flex flex-col  md:p-10 flex-grow-0 lg:w-3/12 w-4/12 justify-center items-top">
-            <Image
-              className="mx-auto "
-              src="./Image/tooling_pabrication_1.png"
-              sizes="(max-width:950px) 100vw,700px"
-              alt={"Grace Solution Logo"}
-              width={300}
-              height={300}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="ml-3/12 lg:mt-3 md:mt-12 xl:px-60 sm:px-10 xl:w-10/12 my-2 mx-auto flex justify-center items-center">
-        <div className="bg-gray-300 xl:w-9/12   xl:h-80 flex flex-row flex-grow rounded-lg ">
-          <div className=" flex flex-col  md:p-10 flex-grow-0 lg:w-5/12 w-5/12 justify-center items-top ">
-            <Image
-              className="mx-auto  rounded-lg ml-2 "
-              src="./Image/warehouse.jpg"
-              sizes="(max-width:20px) 100vw,700px"
-              alt={"Grace Solution Logo"}
-              width={1000}
-              height={800}
-            />
-          </div>
-          <div className=" w-9/12 md:m-5 md:p-8 p-4">
-            <div>
-              <h2 className="lg:text-2xl text-xl font-bold">
-                Warehouse and Logistics
-              </h2>
-            </div>
-
-            <br />
-            <br className="hidden lg:block" />
-
-            <div className="lg:mb-1 mb-3">
-              <p className="xl:mt-2 text-md">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Molestiae laudantium veniam cumque, est corporis reprehenderit
-                neque, commodi ducimus dicta mollitia doloremque quam totam
-                nulla nihil! Eveniet esse error fugit distinctio?
-              </p>
-            </div>
-
-            <button
-              type="button"
-              className="text-white md:mt-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm lg:px-5 px-3 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            >
-              <Link href="/services/warehouse"> Find More Information </Link>
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* Work with us */}
-
-      <div></div>
+      {/* Call-to-Action Section */}
+      <div className="bg-blue-700 text-white text-center py-10 mt-12 rounded-lg shadow-lg">
+        <h3 className="text-2xl font-semibold mb-4">Work with Us</h3>
+        <p className="text-md mb-6">
+          Ready to bring your project to life with our expertise? Let’s work
+          together to create outstanding solutions.
+        </p>
+        <Link href="/contact">
+          <button
+            type="button"
+            className="bg-white text-blue-700 py-2 px-6 rounded-lg hover:bg-gray-100 transition"
+          >
+            Contact Us
+          </button>
+        </Link>
+      </div>
     </main>
   );
 }

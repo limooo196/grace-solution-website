@@ -2,12 +2,13 @@
 import { EmailTemplate } from '../../contact/emailTemplate/emailTemplate';
 import { Resend } from 'resend';
 
-
+console.log("API TEst1")
 const resend = new Resend(process.env.RESEND_API_KEY);
 resend.apiKeys.create({ name: 'Production' });
 
 
 export async function POST() {
+  console.log("API TEst")
 
   new Resend("prod")
   try {

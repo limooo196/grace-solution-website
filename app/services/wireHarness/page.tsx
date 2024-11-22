@@ -16,322 +16,174 @@ import {
   BsLinkedin,
 } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
+import {
+  HiOutlinePencil,
+  HiOutlineRss,
+  HiOutlineCheckCircle,
+  HiOutlineTag,
+} from "react-icons/hi";
 
 export default function Home() {
   return (
-    <main className="lg:pt-12 xl:pb-0 w-full lg:-my-4 ">
-      {/* Hero */}
-      <div className="">
-        <h2 className="text-xl font-bold flex flex-col  items-center justify-center underline">
-          Values We Provide in Wire Harness
-        </h2>
-        <div className="flex flex-col items-start justify-center lg:w-8/12   mx-auto">
-          <ul>
-            <li>
-              <div>
-                <h3 className="text-lg font-bold flex items-start p-1 text-blue-500">
-                  Custom Wire Harness Design and Engineering
-                </h3>
-                <p className="w-10/12 mx-auto">
-                  Our Custom Wire Harness Design and Engineering excellence
-                  stems from our dedication to precision, innovation, and
-                  client-centric solutions. With a engineering team with 15+
-                  years of experience, we apply cutting-edge methodologies for
-                  crafting best wire harnesses. Our careful process ensures
-                  optimal performance, seamless integration, and adherence to
-                  the highest standards. We prioritize collaboration, we work
-                  and communicate closely with clients to understand the
-                  specifications, to deliver solutions that fits with the needs
-                  of clients.
-                </p>
-              </div>
-              <div>
-                <ul className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
-                  <li className="m-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48 my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto "
-                      src="../Image/wire_harness/wire1.png"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={200}
-                      height={200}
-                    />
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto "
-                      src="../Image/wire_harness/wire2.png"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={200}
-                      height={200}
-                    />
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/wire_harness/wire3.png"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-30 md:h-48 my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/wire_harness/wire4.png"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={200}
-                      height={200}
-                    />
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-30 md:h-48 my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/wire_harness/wire5.png"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-30 md:h-48 my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/wire_harness/wire6.png"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                  </li>
-                </ul>
-              </div>
-            </li>
+    <main className="lg:pt-12 xl:pb-0 w-full lg:-my-4 bg-gray-50">
+      <div className="container mx-auto p-8">
+        {/* Header Section */}
+        <header className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-[#27176A]">
+            Wire Harness Manufacturing Solutions
+          </h1>
+          <p className="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">
+            Providing high-quality wire harnesses tailored for industries like
+            automotive, aerospace, and medical devices, ensuring reliability and
+            innovation.
+          </p>
+          <button className="mt-6 bg-[#25D366] text-white py-2 px-6 rounded hover:bg-[#1DAF54] transition duration-300">
+            Contact Us
+          </button>
+        </header>
 
-            <li>
-              <div className="">
-                <h3 className="text-lg font-bold flex items-start p-1 text-blue-500">
-                  Tackle Industry-Specific Solutions
+        {/* Wire Harness Types Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-6">
+            Wire Harness Types
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Automotive Wire Harnesses",
+                description:
+                  "Engineered to meet stringent automotive standards, ensuring safety and reliability in vehicles.",
+                image: "/images/automotive-harness.jpg",
+              },
+              {
+                title: "Industrial Wire Harnesses",
+                description:
+                  "Rugged and durable harnesses designed for harsh industrial environments.",
+                image: "/images/industrial-harness.jpg",
+              },
+              {
+                title: "Aerospace Wire Harnesses",
+                description:
+                  "High-performance harnesses for aerospace applications, adhering to strict regulatory standards.",
+                image: "/images/aerospace-harness.jpg",
+              },
+              {
+                title: "Medical Device Wire Harnesses",
+                description:
+                  "Reliable and safe harnesses for critical medical equipment.",
+                image: "/images/medical-harness.jpg",
+              },
+              {
+                title: "Custom Wire Harnesses",
+                description:
+                  "Tailored harness solutions for unique requirements across various sectors.",
+                image: "/images/custom-harness.jpg",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-r from-indigo-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:from-indigo-200 hover:to-indigo-300 transition duration-300 transform hover:scale-105"
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-40 object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-2xl font-semibold text-[#27176A] mb-4">
+                  {item.title}
                 </h3>
-                <div className="w-10/12 mx-auto">
-                  <p>
-                    We have the ability and experience to address
-                    Industry-Specific Solutions in wire harness services is
-                    underpinned by a nuanced understanding of diverse sectors.
-                  </p>
-                  <br />
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-                  <div className="">
-                    <h4>Industries that we closely worked with</h4>
-                    <ul className="list-disc ml-3	">
-                      <li>Lighting Wire Harnesses</li>
-                      <li>Wire harness assemblies for electronics</li>
-                      <li>Automotive</li>
-                    </ul>
-                  </div>
-                  <br />
-                  <p>
-                    The specialized knowledge allows us to tailor wire harness
-                    solutions to meet the unique demands various sectors,
-                    ensuring optimal performance, compliance, and reliability.
-                    Our service stands out for its adaptability, technical
-                    expertise, and a proven track record in delivering
-                    industry-specific wire harness solutions that surpass
-                    expectations.
-                  </p>
+        {/* Value-Added Services Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
+            Why Choose Us
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            {[
+              {
+                title: "Design Expertise",
+                description:
+                  "Collaborate with our experts for tailored wire harness solutions.",
+                icon: <HiOutlinePencil className="h-8 w-8" />,
+              },
+              {
+                title: "Prototyping",
+                description:
+                  "Rapid prototyping services for quick iterations and testing.",
+                icon: <HiOutlineRss className="h-8 w-8" />,
+              },
+              {
+                title: "Quality Assurance",
+                description:
+                  "Rigorous quality testing to ensure reliable performance.",
+                icon: <HiOutlineCheckCircle className="h-8 w-8" />,
+              },
+              {
+                title: "Global Standards",
+                description:
+                  "Certified with ISO 9001:2015 and compliant with UL standards.",
+                icon: <HiOutlineCheckCircle className="h-8 w-8" />,
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition duration-300 transform hover:shadow-xl hover:bg-indigo-50"
+              >
+                <div className="bg-[#111827] text-white p-4 rounded-full mb-4">
+                  {service.icon}
                 </div>
-              </div>
-            </li>
-
-            <li>
-              <div>
-                <h3 className="text-lg font-bold flex items-start p-1 text-blue-500">
-                  Quality Assurance and Testing
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                  {service.title}
                 </h3>
-                <p className="w-10/12 mx-auto">
-                  Our Wire Harness Service sets itself apart through an
-                  unwavering commitment to complete Quality Assurance and
-                  Testing. At every stage of the manufacturing process, we
-                  adhere to stringent quality control measures, ensuring that
-                  each wire harness meets and exceeds industry standards.
-                  Rigorous testing protocols, including comprehensive electrical
-                  testing and inspections, are integral to our operations. This
-                  meticulous approach not only guarantees the reliability and
-                  durability of our wire harnesses but also provides our clients
-                  with the confidence that each product leaving our facilities
-                  has undergone thorough scrutiny. Our dedication to complete
-                  quality assurance and testing positions our service as a
-                  benchmark for excellence and reliability in the wire harness
-                  industry.
-                </p>
-                <ul className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72 my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto "
-                      src="../Image/testing_tool/harness_tester.jpg"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-
-                    <div className="">
-                      <p>Cable Harness Tester</p>
-                    </div>
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72 my-auto flex flex-col items-center ">
-                    <Image
-                      className=" m-auto"
-                      src="../Image/testing_tool/terminal_cross_section_analyzer.jpg"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={200}
-                    />
-                    <div>
-                      <p>Cross Section Analyzer</p>
-                    </div>
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-48 md:h-72 my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/testing_tool/withstanding_voltage_test.jpg "
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                    <div className="flex flex-col items-center justify-center mx-auto p-2">
-                      <p className="flex flex-row items-center justify-center mx-auto">
-                        Voltage and Insulation Resistance Tester
-                      </p>
-                    </div>
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden h-48 md:h-72  my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/testing_tool/caliper.jpg"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                    <div>
-                      <p>Caliper</p>
-                    </div>
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-48 md:h-72  my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/testing_tool/micrometer.jpg"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                    <div>
-                      <p>Micrometer</p>
-                    </div>
-                  </li>
-                  <li className="mx-auto rounded-xl shadow-lg overflow-hidden  h-48 md:h-72  my-auto flex flex-col items-center ">
-                    <Image
-                      className="m-auto"
-                      src="../Image/testing_tool/push_pull_scale.jpg"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                    <div>
-                      <p>Push Pull Scale</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li>
-              <div>
-                <h3 className="text-lg font-bold flex items-start p-1 text-blue-500">
-                  Prototyping and Consultation
-                </h3>
-                <p className="w-10/12 mx-auto">
-                  Our Wire Harness Service goes beyond traditional offerings by
-                  providing Prototyping and Consultation services that exemplify
-                  our commitment to client satisfaction. We understand the
-                  importance of validating designs before full-scale production,
-                  and our Prototyping service allows clients to test and refine
-                  wire harness solutions, ensuring they align perfectly with
-                  project requirements. Moreover, our Consultation service
-                  stands as a cornerstone of our client-centric approach. Our
-                  experienced team collaborates closely with clients, offering
-                  expert advice, understanding unique project needs, and
-                  providing tailored solutions. This personalized consultation
-                  ensures that each wire harness is not just a product but a
-                  strategic component designed to meet specific challenges and
-                  expectations.
+                <p className="text-gray-600 text-center">
+                  {service.description}
                 </p>
               </div>
-            </li>
+            ))}
+          </div>
+        </section>
 
-            <li>
-              <div>
-                <h3 className="text-lg font-bold flex items-start p-1 text-blue-500">
-                  Certifications and Standards
-                </h3>
-                <p className="w-10/12 mx-auto">
-                  Our Wire Harness service places a paramount emphasis on
-                  adhering to international quality standards, underscoring our
-                  commitment to excellence. Every aspect of our wire harness
-                  manufacturing process is meticulously aligned with globally
-                  recognized benchmarks, ensuring the highest levels of quality
-                  and reliability. Additionally, our dedication to meeting
-                  industry standards is reinforced by a range of certifications
-                  attesting to the quality of our products. These certifications
-                  not only validate our compliance with international standards
-                  but also serve as a testament to our unwavering commitment to
-                  delivering wire harness solutions of the highest caliber.
-                </p>
-                <br />
-                <h2 className="w-10/12 mx-auto font-bold">
-                  Our Proudest Certifications
-                </h2>
-                <div className="flex flex-row justify-center items-center mx-auto">
-                  <div className="mx-auto">
-                    <Image
-                      className=" "
-                      src="../Image/certificates/cert1.jpg"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                    <h3 className="font-semibold mx-auto">
-                      Certificate ISO 9001:2015 by TUV Rheinland
-                    </h3>
-                  </div>
-
-                  <div className="mx-auto">
-                    <Image
-                      className=" "
-                      src="../Image/certificates/cert2.jpg"
-                      sizes="(max-width:950px) 100vw,700px"
-                      alt={"Grace Solution Logo"}
-                      width={250}
-                      height={250}
-                    />
-                    <h3 className="font-semibold">
-                      Certificate of Wire Harness Component by UL
-                    </h3>
-                  </div>
-                </div>
+        {/* Certifications Section */}
+        <section className="mb-20 text-center">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+            Certifications
+          </h2>
+          <p className="text-lg text-gray-600 mb-6">
+            Trusted and certified for quality and compliance with ISO 9001:2015
+            and UL standards.
+          </p>
+          <div className="flex flex-wrap justify-center gap-8">
+            {["iso.jpg", "ul.jpg"].map((cert, index) => (
+              <div key={index} className="w-40 h-40 bg-gray-100 p-4 rounded-lg">
+                <Image
+                  src={`/images/${cert}`}
+                  alt={`Certification ${index + 1}`}
+                  width={160}
+                  height={160}
+                  className="object-contain"
+                />
               </div>
-            </li>
-          </ul>
-        </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="text-center">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+            Get in Touch
+          </h2>
+          <p className="text-lg text-gray-600 mb-6">
+            Have questions or need a custom solution? Contact us today!
+          </p>
+          <button className="bg-[#25D366] text-white py-2 px-6 rounded hover:bg-[#1DAF54] transition duration-300">
+            Contact Us
+          </button>
+        </section>
       </div>
     </main>
   );

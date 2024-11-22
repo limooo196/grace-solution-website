@@ -24,59 +24,84 @@ const styles = {
 
 function Footer() {
   return (
-    <footer className=" xl:pt-[30px] mt-6 pt-[20px] bg-sky-200 lg:rounded-t-[100px] ">
-      <div className="container mx-auto pb-4 ">
-        <div className="flex flex-col xl:flex-row justify-center items-center mx-auto ">
-          <div className=" items-center mx-auto">
-            <div className="flex justify-center items-center lg:justify-start">
-              <Link href="/">
-                <Image
-                  src="./Image/Logo/GraceSolutionLogo.png"
-                  width={120}
-                  height={80}
-                  alt={"Grace Solution Logo"}
-                  className="cursor-pointer"
-                />
-              </Link>
-              <br />
-            </div>
-            <div className="flex justify-center items-center  lg:justify-start lg:items-start">
-              <h3 className="text-md lg:text-2xl font-medium mt-3 text-center">
-                WIRE HARNESS AND CABLE ASSEMBLY SOLUTIONS
-              </h3>
-            </div>
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container mx-auto px-6 lg:px-20">
+        {/* Footer Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Company Info */}
+          <div className="flex flex-col items-center lg:items-start">
+            <Link href="/">
+              <Image
+                src="./Image/Logo/GraceSolutionLogo.png"
+                width={150}
+                height={80}
+                alt="Grace Solution Logo"
+                className="cursor-pointer"
+              />
+            </Link>
+            <h3 className="text-xl font-semibold mt-4 text-center lg:text-left">
+              WIRE HARNESS AND CABLE ASSEMBLY SOLUTIONS
+            </h3>
+            <p className="text-gray-400 mt-4 text-center lg:text-left text-sm leading-relaxed">
+              We specialize in delivering precision-engineered wire harness and
+              cable assembly solutions for industrial and commercial
+              applications.
+            </p>
+          </div>
 
-            {/* location, email, phone */}
-            <div className="flex  flex-col gap-y-1 lg:gap-y-3 mb-3 mt-2 mx-auto text-l tracking-wide  justify-center items-center lg:justify-start lg:items-start">
-              <div className="flex items-center gap-x-[6px]">
-                <BsWhatsapp className="lg:text-2xl  text-green-500" />
-                <div className="text-md lg:text-lg">
-                  &nbsp; (+62) 81261007619
-                </div>
-              </div>
-
-              <div className="flex items-center gap-x-[6px]">
-                <BsWhatsapp className="lg:text-2xl text-green-500" />
-                <div className="text-md lg:text-lg">
-                  {" "}
-                  &nbsp; (+62) 82390305100
-                </div>
-              </div>
-
-              <div className="flex items-center gap-x-[6px]">
-                <AiOutlineMail className="text-xl lg:text-2xl " />
-                <div>&nbsp; sales@grace-solution.com</div>
-              </div>
+          {/* Contact Info */}
+          <div className="flex flex-col items-center lg:items-start">
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+            <div className="flex items-center gap-3 mb-3">
+              <BsWhatsapp className="text-green-500 text-xl" />
+              <span className="text-gray-300">(+62) 81261007619</span>
             </div>
-            <div className="mx-auto text-center px-4 lg:px-0">
-              <div className="flex items-start gap-x-[6px] justify-start   ">
-                <BsFillPinMapFill className="text-2xl lg:text-2xl" />
-                <div className="text-sm lg:text-md">
-                  Jl. Kenanga No.240, Muka Kuning, Kec. Sei Beduk, Kota Batam,
-                  Kepulauan Riau 29433
-                </div>
-              </div>
+            <div className="flex items-center gap-3 mb-3">
+              <BsWhatsapp className="text-green-500 text-xl" />
+              <span className="text-gray-300">(+62) 82390305100</span>
             </div>
+            <div className="flex items-center gap-3 mb-3">
+              <AiOutlineMail className="text-xl" />
+              <span className="text-gray-300">sales@grace-solution.com</span>
+            </div>
+            <Link href="/contact">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md mt-4">
+                Get in Touch
+              </button>
+            </Link>
+          </div>
+
+          {/* Address */}
+          <div className="flex flex-col items-center lg:items-start">
+            <h4 className="text-lg font-semibold mb-4">Our Location</h4>
+            <div className="flex items-start gap-3">
+              <BsFillPinMapFill className="text-2xl" />
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Jl. Kenanga No.240, Muka Kuning, Kec. Sei Beduk, Kota Batam,
+                Kepulauan Riau 29433
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col lg:flex-row justify-between items-center">
+          <p className="text-gray-500 text-sm">
+            © 2024 Grace Solutions. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6 mt-4 lg:mt-0">
+            <Link
+              href="/privacy"
+              className="text-gray-400 hover:text-white text-sm"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-gray-400 hover:text-white text-sm"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
