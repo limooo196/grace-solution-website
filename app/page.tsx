@@ -29,7 +29,26 @@ import { AiOutlineMail } from "react-icons/ai";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-export default function Home() {
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * The home page of the website.
+ *
+ * This page displays a hero section with a background image, a gradient overlay,
+ * and a content section with a title, subtitle, and a button.
+ *
+ * Below the hero section, it displays a statistics section with a title and four
+ * statistic cards. Each card contains a number, a title, and a description.
+ *
+ * After the statistics section, it displays a service section with a title and
+ * four service cards. Each card contains an icon, a title, and a description.
+ *
+ * At the bottom of the page, it displays a testimonial section with a title and
+ * three testimonial cards. Each card contains a quote, a name, and a company.
+ *
+ * The page also includes a Why Grace Solutions section, a Testing section, and a
+ * footer section.
+ */
+/******  b4a2a648-0a6a-4f98-a8f8-50e93e82388d  *******/ export default function Home() {
   return (
     <main className="">
       <section className="relative w-full h-[920px] lg:h-[960px]">
