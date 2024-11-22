@@ -84,9 +84,11 @@ export default function Home() {
                 key={index}
                 className="bg-gradient-to-r from-indigo-100 to-indigo-200 p-6 rounded-lg shadow-lg hover:from-indigo-200 hover:to-indigo-300 transition duration-300 transform hover:scale-105"
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
+                  width={500} // Example width
+                  height={300} // Example height
                   className="w-full h-40 object-cover rounded-lg mb-4"
                 />
                 <h3 className="text-2xl font-semibold text-[#27176A] mb-4">

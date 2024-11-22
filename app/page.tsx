@@ -495,7 +495,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
             <Image
-              className="mx-auto  "
+              className="mx-auto"
               src="./Image/logo/oriex.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
@@ -503,7 +503,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
               height={200}
             />
             <Image
-              className="mx-auto "
+              className="mx-auto"
               src="./Image/logo/servo.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
@@ -511,7 +511,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
               height={200}
             />
             <Image
-              className="mx-auto "
+              className="mx-auto"
               src="./Image/logo/osie.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
@@ -527,7 +527,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
               height={200}
             />
             <Image
-              className="mx-auto "
+              className="mx-auto"
               src="./Image/logo/sumitomo.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
@@ -535,7 +535,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
               height={200}
             />
             <Image
-              className="mx-auto "
+              className="mx-auto"
               src="./Image/logo/siix.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
