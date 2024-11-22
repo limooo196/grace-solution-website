@@ -32,7 +32,7 @@ function Footer() {
           <div className="flex flex-col items-center lg:items-start">
             <Link href="/">
               <Image
-                src="./Image/Logo/GraceSolutionLogo.png"
+                src="./Image/logo/GraceSolutionLogo.png"
                 width={150}
                 height={80}
                 alt="Grace Solution Logo"
