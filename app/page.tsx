@@ -51,6 +51,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 /******  b4a2a648-0a6a-4f98-a8f8-50e93e82388d  *******/ export default function Home() {
   return (
     <main className="">
+      <SpeedInsights />
+      <Analytics />
       <section className="relative w-full h-[920px] lg:h-[960px]">
         {/* Background Image */}
         <Image
