@@ -1,29 +1,26 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import Carousel from "nuka-carousel";
-import {
-  BsList,
-  BsX,
-  BsWhatsapp,
-  BsFillPinMapFill,
-  BsTelephoneFill,
-  BsArrowRight,
-  BsArrowLeft,
-  BsFacebook,
-  BsInstagram,
-  BsXCircle,
-  BsLinkedin,
-} from "react-icons/bs";
-import { AiOutlineMail } from "react-icons/ai";
+import React, { useState } from "react";
 import {
   HiOutlinePencil,
   HiOutlineRss,
   HiOutlineCheckCircle,
-  HiOutlineTag,
 } from "react-icons/hi";
 
-export default function Home() {
+const Certificates = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState("");
+
+  const handleImageClick = (imageSrc: string) => {
+    setCurrentImage(imageSrc);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setCurrentImage("");
+  };
+
   return (
     <main className="lg:pt-12 xl:pb-0 w-full lg:-my-4 bg-gray-50">
       <div className="container mx-auto p-8">
@@ -100,56 +97,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Value-Added Services Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-            Why Choose Us
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {[
-              {
-                title: "Design Expertise",
-                description:
-                  "Collaborate with our experts for tailored wire harness solutions.",
-                icon: <HiOutlinePencil className="h-8 w-8" />,
-              },
-              {
-                title: "Prototyping",
-                description:
-                  "Rapid prototyping services for quick iterations and testing.",
-                icon: <HiOutlineRss className="h-8 w-8" />,
-              },
-              {
-                title: "Quality Assurance",
-                description:
-                  "Rigorous quality testing to ensure reliable performance.",
-                icon: <HiOutlineCheckCircle className="h-8 w-8" />,
-              },
-              {
-                title: "Global Standards",
-                description:
-                  "Certified with ISO 9001:2015 and compliant with UL standards.",
-                icon: <HiOutlineCheckCircle className="h-8 w-8" />,
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center hover:scale-105 transition duration-300 transform hover:shadow-xl hover:bg-indigo-50"
-              >
-                <div className="bg-[#111827] text-white p-4 rounded-full mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-center">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Certifications Section */}
         <section className="mb-20 text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">
@@ -159,18 +106,49 @@ export default function Home() {
             Trusted and certified for quality and compliance with ISO 9001:2015
             and UL standards.
           </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {["iso.jpg", "ul.jpg"].map((cert, index) => (
-              <div key={index} className="w-40 h-40 bg-gray-100 p-4 rounded-lg">
-                <Image
-                  src={`/images/${cert}`}
-                  alt={`Certification ${index + 1}`}
-                  width={160}
-                  height={160}
-                  className="object-contain"
-                />
+          <div className="flex flex-col items-center p-6">
+            <h1 className="text-2xl font-bold mb-4">Certificates</h1>
+            <div className="flex flex-wrap justify-center gap-8">
+              {["cert1.jpg", "cert2.jpg"].map((cert, index) => {
+                const imageSrc = `/Image/certificates/${cert}`;
+                return (
+                  <div
+                    key={index}
+                    className="relative w-40 h-40 bg-gray-100 p-4 rounded-lg overflow-hidden"
+                  >
+                    <Image
+                      src={imageSrc}
+                      alt={`Certification ${index + 1}`}
+                      width={160}
+                      height={160}
+                      className="object-contain transition-transform transform hover:scale-110 cursor-pointer"
+                      onClick={() => handleImageClick(imageSrc)} // Click to open modal
+                    />
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Modal for enlarged image */}
+            {isOpen && (
+              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-white p-4 rounded-lg relative">
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-2 right-2 text-gray-600"
+                  >
+                    X
+                  </button>
+                  <Image
+                    src={currentImage}
+                    alt="Enlarged"
+                    className="max-w-full max-h-screen"
+                    width={500} // Add width and height for the enlarged image
+                    height={500}
+                  />
+                </div>
               </div>
-            ))}
+            )}
           </div>
         </section>
 
@@ -189,4 +167,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Certificates; // Export the Certificates component

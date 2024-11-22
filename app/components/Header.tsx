@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   BsList,
@@ -11,22 +11,35 @@ import {
   BsArrowRight,
   BsArrowLeft,
 } from "react-icons/bs";
-import { IoLocationOutline } from "react-icons/io5";
 
-const styles = {
-  navLinks:
-    "cursor-pointer ml-10 uppercase border-b border-white hover:border-[#F6b519] text-xl",
-};
-
-function Header() {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
-
   const [mobileNavBar, setMobileNavBar] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="bg-gray-800 text-white shadow-lg py-6">
-      <div className="container mx-auto px-6 lg:px-20 flex justify-between items-center">
+    <header
+      className={`fixed top-0 left-0 w-full transition-all duration-300 ${
+        isScrolled ? "bg-gray-800 shadow-md h-16" : "bg-transparent h-20"
+      } z-50`}
+    >
+      <div className="container mx-auto px-6 lg:px-20 flex justify-between items-center h-full">
         {/* Logo Section */}
         <Link href="/">
           <Image
@@ -76,7 +89,7 @@ function Header() {
         <div className="px-6 py-4">
           <Link href="/">
             <Image
-              src="./Image/Logo/GraceSolutionLogo.png"
+              src="./Image/logo/GraceSolutionLogo.png"
               width={100}
               height={75}
               alt="Grace Solution Logo"
@@ -121,7 +134,7 @@ function Header() {
       </nav>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex justify-center bg-gray-800 shadow-md mt-6 py-3 rounded-md">
+      <nav className="hidden lg:flex justify-center bg-gray-800 shadow-md py-2 rounded-md">
         <ul className="flex gap-12 text-gray-300 text-sm font-medium">
           <li className="hover:text-blue-400 transition">
             <Link href="/services">Services</Link>
@@ -139,6 +152,6 @@ function Header() {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
