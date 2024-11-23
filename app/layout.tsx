@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Grace Solution",
@@ -25,10 +24,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-blue">
         <SpeedInsights />
-        <Analytics />
 
         <Header />
-        {children}
+        <main className="pt-20"> {children} </main>
+
         <Footer />
       </body>
     </html>

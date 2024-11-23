@@ -26,7 +26,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FaToolbox, FaWarehouse, FaWrench, FaCube } from "react-icons/fa";
 
 import { AiOutlineMail } from "react-icons/ai";
-import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 /*************  ✨ Codeium Command ⭐  *************/
@@ -52,7 +51,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
   return (
     <main className="">
       <SpeedInsights />
-      <Analytics />
       <section className="relative w-full h-[920px] lg:h-[960px]">
         {/* Background Image */}
         <Image
@@ -496,7 +494,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
           <div className="grid grid-cols-1 lg:grid-cols-3  xl:flex-row gap-6 justify-center items-center">
             <Image
               className="mx-auto"
-              src="./Image/logo/oriex.png"
+              src="./Image/Logo/oriex.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={200}
@@ -504,7 +502,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
             />
             <Image
               className="mx-auto"
-              src="./Image/logo/servo.jpg"
+              src="./Image/Logo/servo.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={200}
@@ -512,7 +510,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
             />
             <Image
               className="mx-auto"
-              src="./Image/logo/osie.png"
+              src="./Image/Logo/osie.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={200}
@@ -520,7 +518,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
             />
             <Image
               className="mx-auto"
-              src="./Image/logo/pegatron.png"
+              src="./Image/Logo/pegatron.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={200}
@@ -528,7 +526,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
             />
             <Image
               className="mx-auto"
-              src="./Image/logo/sumitomo.png"
+              src="./Image/Logo/sumitomo.png"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={200}
@@ -536,7 +534,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
             />
             <Image
               className="mx-auto"
-              src="./Image/logo/siix.jpg"
+              src="./Image/Logo/siix.jpg"
               sizes="(max-width:950px) 100vw,700px"
               alt={"Grace Solution Logo"}
               width={200}

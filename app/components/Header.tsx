@@ -3,8 +3,6 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import {
-  BsList,
-  BsX,
   BsWhatsapp,
   BsFillPinMapFill,
   BsTelephoneFill,
@@ -37,14 +35,14 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 w-full transition-all duration-300 ${
         isScrolled ? "bg-gray-800 shadow-md h-16" : "bg-transparent h-20"
-      } z-50`}
+      } z-50`} // No bottom margin here
     >
       <div className="container mx-auto px-6 lg:px-20 flex justify-between items-center h-full">
         {/* Logo Section */}
         <Link href="/">
           <Image
-            src="./Image/logo/GraceSolutionLogo.png"
-            width={120}
+            src="./Image/Logo/GraceSolutionLogo.png"
+            width={100}
             height={80}
             alt="Grace Solution Logo"
             className="cursor-pointer"
@@ -55,13 +53,23 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-10">
           <div className="flex items-center gap-3">
             <BsFillPinMapFill className="text-blue-400 text-xl" />
-            <span className="text-gray-300 text-sm">
+            <span
+              className={`text-sm ${
+                isScrolled ? "text-white" : "text-gray-700"
+              }`}
+            >
               Muka-Kuning 29433, Batam - Indonesia
             </span>
           </div>
           <div className="flex items-center gap-3">
             <BsTelephoneFill className="text-blue-400 text-xl" />
-            <span className="text-gray-300 text-sm">(0770) 611-367</span>
+            <span
+              className={`text-sm ${
+                isScrolled ? "text-white" : "text-gray-700"
+              }`}
+            >
+              (0770) 611-367
+            </span>
           </div>
           <Link href="/contact">
             <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md flex items-center">
@@ -100,7 +108,11 @@ const Header = () => {
             <li>
               <Link
                 href="/services"
-                className="text-gray-300 hover:text-blue-400 transition"
+                className={`transition ${
+                  isScrolled
+                    ? "text-white hover:text-blue-400"
+                    : "text-gray-300 hover:text-blue-400"
+                }`}
               >
                 Services
               </Link>
@@ -108,7 +120,11 @@ const Header = () => {
             <li>
               <Link
                 href="/products"
-                className="text-gray-300 hover:text-blue-400 transition"
+                className={`transition ${
+                  isScrolled
+                    ? "text-white hover:text-blue-400"
+                    : "text-gray-300 hover:text-blue-400"
+                }`}
               >
                 Products
               </Link>
@@ -116,7 +132,11 @@ const Header = () => {
             <li>
               <Link
                 href="/about"
-                className="text-gray-300 hover:text-blue-400 transition"
+                className={`transition ${
+                  isScrolled
+                    ? "text-white hover:text-blue-400"
+                    : "text-gray-300 hover:text-blue-400"
+                }`}
               >
                 About
               </Link>
@@ -124,7 +144,11 @@ const Header = () => {
             <li>
               <Link
                 href="/contact"
-                className="text-gray-300 hover:text-blue-400 transition"
+                className={`transition ${
+                  isScrolled
+                    ? "text-white hover:text-blue-400"
+                    : "text-gray-300 hover:text-blue-400"
+                }`}
               >
                 Contact Us
               </Link>
@@ -135,17 +159,33 @@ const Header = () => {
 
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex justify-center bg-gray-800 shadow-md py-2 rounded-md">
-        <ul className="flex gap-12 text-gray-300 text-sm font-medium">
-          <li className="hover:text-blue-400 transition">
+        <ul className="flex gap-12 text-sm font-medium">
+          <li
+            className={`hover:text-blue-400 transition ${
+              isScrolled ? "text-white" : "text-gray-300"
+            }`}
+          >
             <Link href="/services">Services</Link>
           </li>
-          <li className="hover:text-blue-400 transition">
+          <li
+            className={`hover:text-blue-400 transition ${
+              isScrolled ? "text-white" : "text-gray-300"
+            }`}
+          >
             <Link href="/products">Products</Link>
           </li>
-          <li className="hover:text-blue-400 transition">
+          <li
+            className={`hover:text-blue-400 transition ${
+              isScrolled ? "text-white" : "text-gray-300"
+            }`}
+          >
             <Link href="/about">About</Link>
           </li>
-          <li className="hover:text-blue-400 transition">
+          <li
+            className={`hover:text-blue-400 transition ${
+              isScrolled ? "text-white" : "text-gray-300"
+            }`}
+          >
             <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
