@@ -9,6 +9,9 @@ const config: Config = {
   theme: {    
     fontFamily: {
     sans: ['"Segoe UI"','Roboto','sans-serif',],
+    'open-sans': ['"Open Sans"', 'sans-serif'], // Add Open Sans
+
+    'ropa-sans': ['"Ropa Sans"', 'sans-serif'],
     'montserrat': ['Montserrat'],
     'lato': ['Lato'],
     'garamond': ['Garamond']

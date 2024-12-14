@@ -11,31 +11,27 @@ import {
 } from "react-icons/bs";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
   const [mobileNavBar, setMobileNavBar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    setIsScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Dynamic background for the header
+  const navBg = isScrolled ? "bg-white" : "bg-[#0B132B]";
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full transition-all duration-300 ${
-        isScrolled ? "bg-gray-800 shadow-md h-16" : "bg-transparent h-20"
-      } z-50`} // No bottom margin here
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-md ${navBg}`}
+      style={{
+        height: isScrolled ? "70px" : "90px",
+      }}
     >
       <div className="container mx-auto px-6 lg:px-20 flex justify-between items-center h-full">
         {/* Logo Section */}
@@ -51,29 +47,31 @@ const Header = () => {
 
         {/* Contact Information (Desktop) */}
         <div className="hidden lg:flex items-center gap-10">
-          <div className="flex items-center gap-3">
-            <BsFillPinMapFill className="text-blue-400 text-xl" />
-            <span
-              className={`text-sm ${
-                isScrolled ? "text-white" : "text-gray-700"
-              }`}
-            >
+          <div
+            className={`flex items-center gap-3 ${
+              isScrolled ? "text-[#0B132B]" : "text-white"
+            }`}
+          >
+            <BsFillPinMapFill className="text-xl" />
+            <span className="text-sm">
               Muka-Kuning 29433, Batam - Indonesia
             </span>
           </div>
-          <div className="flex items-center gap-3">
-            <BsTelephoneFill className="text-blue-400 text-xl" />
-            <span
-              className={`text-sm ${
-                isScrolled ? "text-white" : "text-gray-700"
-              }`}
-            >
-              (0770) 611-367
-            </span>
+          <div
+            className={`flex items-center gap-3 ${
+              isScrolled ? "text-[#0B132B]" : "text-white"
+            }`}
+          >
+            <BsTelephoneFill className="text-xl" />
+            <span className="text-sm">(0770) 611-367</span>
           </div>
           <Link href="/contact">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md flex items-center">
-              <BsWhatsapp className="text-white text-lg mr-2" />
+            <button
+              className={`bg-[#0F8652] ${
+                isScrolled ? "text-[#0B132B]" : "text-white"
+              } flex items-center gap-2 hover:bg-[#0D7345] px-4 py-2 rounded-md shadow-md transition duration-300 font-semibold`}
+            >
+              <BsWhatsapp className="text-lg" />
               Contact Us
             </button>
           </Link>
@@ -82,7 +80,9 @@ const Header = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileNavBar(!mobileNavBar)}
-          className="lg:hidden text-gray-300 text-2xl"
+          className={`${
+            isScrolled ? "text-[#0B132B]" : "text-white"
+          } lg:hidden text-2xl`}
         >
           {mobileNavBar ? <BsArrowLeft /> : <BsArrowRight />}
         </button>
@@ -90,14 +90,14 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <nav
-        className={`fixed top-0 left-0 bg-gray-900 w-[250px] h-full shadow-lg transform transition-transform duration-300 z-50 ${
+        className={`fixed top-0 left-0 ${navBg} w-[250px] h-full shadow-lg transform transition-transform duration-300 z-50 ${
           mobileNavBar ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="px-6 py-4">
           <Link href="/">
             <Image
-              src="./Image/logo/GraceSolutionLogo.png"
+              src="./Image/Logo/GraceSolutionLogo.png"
               width={100}
               height={75}
               alt="Grace Solution Logo"
@@ -105,14 +105,11 @@ const Header = () => {
             />
           </Link>
           <ul className="space-y-6">
+            {/* For mobile, keep links white on a navy background */}
             <li>
               <Link
                 href="/services"
-                className={`transition ${
-                  isScrolled
-                    ? "text-white hover:text-blue-400"
-                    : "text-gray-300 hover:text-blue-400"
-                }`}
+                className="text-white hover:text-[#0F8652] transition font-medium"
               >
                 Services
               </Link>
@@ -120,11 +117,7 @@ const Header = () => {
             <li>
               <Link
                 href="/products"
-                className={`transition ${
-                  isScrolled
-                    ? "text-white hover:text-blue-400"
-                    : "text-gray-300 hover:text-blue-400"
-                }`}
+                className="text-white hover:text-[#0F8652] transition font-medium"
               >
                 Products
               </Link>
@@ -132,11 +125,7 @@ const Header = () => {
             <li>
               <Link
                 href="/about"
-                className={`transition ${
-                  isScrolled
-                    ? "text-white hover:text-blue-400"
-                    : "text-gray-300 hover:text-blue-400"
-                }`}
+                className="text-white hover:text-[#0F8652] transition font-medium"
               >
                 About
               </Link>
@@ -144,11 +133,7 @@ const Header = () => {
             <li>
               <Link
                 href="/contact"
-                className={`transition ${
-                  isScrolled
-                    ? "text-white hover:text-blue-400"
-                    : "text-gray-300 hover:text-blue-400"
-                }`}
+                className="text-white hover:text-[#0F8652] transition font-medium"
               >
                 Contact Us
               </Link>
@@ -157,38 +142,24 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Desktop Navigation */}
-      <nav className="hidden lg:flex justify-center bg-gray-800 shadow-md py-2 rounded-md">
-        <ul className="flex gap-12 text-sm font-medium">
-          <li
-            className={`hover:text-blue-400 transition ${
-              isScrolled ? "text-white" : "text-gray-300"
-            }`}
-          >
-            <Link href="/services">Services</Link>
-          </li>
-          <li
-            className={`hover:text-blue-400 transition ${
-              isScrolled ? "text-white" : "text-gray-300"
-            }`}
-          >
-            <Link href="/products">Products</Link>
-          </li>
-          <li
-            className={`hover:text-blue-400 transition ${
-              isScrolled ? "text-white" : "text-gray-300"
-            }`}
-          >
-            <Link href="/about">About</Link>
-          </li>
-          <li
-            className={`hover:text-blue-400 transition ${
-              isScrolled ? "text-white" : "text-gray-300"
-            }`}
-          >
-            <Link href="/contact">Contact Us</Link>
-          </li>
-        </ul>
+      {/* Desktop Navigation with a glass-like background */}
+      <nav className="hidden lg:flex justify-center py-2">
+        <div className="bg-[#0B132B]/60 backdrop-blur-md rounded-full px-8 py-2">
+          <ul className="flex gap-12 text-sm font-medium text-white">
+            <li className="hover:text-[#0F8652] transition">
+              <Link href="/services">Services</Link>
+            </li>
+            <li className="hover:text-[#0F8652] transition">
+              <Link href="/products">Products</Link>
+            </li>
+            <li className="hover:text-[#0F8652] transition">
+              <Link href="/about">About</Link>
+            </li>
+            <li className="hover:text-[#0F8652] transition">
+              <Link href="/contact">Contact Us</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
   );

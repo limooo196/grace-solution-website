@@ -59,17 +59,17 @@ export default function About() {
   ];
 
   return (
-    <main className="bg-gray-50 text-gray-800">
+    <main className="bg-white text-[#0B132B] font-sans">
       {/* Hero Section */}
       <motion.div
-        className="bg-blue-500 text-white py-16"
+        className="bg-[#0B132B] text-white py-16 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">About Us</h1>
-          <p className="mt-4 text-lg">
+          <h1 className="text-4xl font-serif font-bold">About Us</h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
             PT. Grace Solution: Your Trusted Partner in Cable & Wire Harness
             Manufacturing.
           </p>
@@ -79,16 +79,16 @@ export default function About() {
       {/* About Company */}
       <section className="container mx-auto py-12 px-6 lg:px-20">
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
           <div>
-            <h2 className="text-3xl font-bold text-blue-500 mb-4">
+            <h2 className="font-serif text-3xl font-bold text-[#0B132B] mb-4">
               Industry Leader in Wire Harness Solutions
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="text-md md:text-lg leading-relaxed text-[#6C6C6C]">
               Established in 2005, PT. Grace Solution specializes in wire
               harness and cable assemblies for various sectors including
               off-road equipment, emergency services, heavy-duty trucks,
@@ -98,49 +98,57 @@ export default function About() {
               to excellence.
             </p>
           </div>
-          <Image
-            src="./Image/green-cable.jpg"
-            alt="Industry Leader"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-lg"
-          />
+          <div>
+            <Image
+              src="./Image/green-cable.jpg"
+              alt="Industry Leader"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-lg object-cover"
+            />
+          </div>
         </motion.div>
       </section>
 
       {/* Achievements */}
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-6 lg:px-20">
-          <h2 className="text-3xl font-bold text-center text-blue-500 mb-8">
+      <section className="bg-[#F2F2F2] py-12 px-4">
+        <div className="container mx-auto lg:px-20">
+          <h2 className="font-serif text-3xl font-bold text-center text-[#0B132B] mb-8">
             Our Achievements
           </h2>
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
-              <FaMedal className="text-blue-500 text-4xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4">ISO Certified</h3>
-              <p>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition hover:-translate-y-1">
+              <FaMedal className="text-[#0F8652] text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-semibold mb-4 text-[#0B132B]">
+                ISO Certified
+              </h3>
+              <p className="text-[#6C6C6C] text-sm leading-relaxed">
                 We proudly hold ISO 9001:2015 and UL817 certifications, ensuring
                 our dedication to quality and safety.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
-              <FaGlobe className="text-blue-500 text-4xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Global Expansion</h3>
-              <p>
-                Serving international markets with a state-of-the-art factory
-                space of 8000m² and growing.
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition hover:-translate-y-1">
+              <FaGlobe className="text-[#0F8652] text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-semibold mb-4 text-[#0B132B]">
+                Global Expansion
+              </h3>
+              <p className="text-[#6C6C6C] text-sm leading-relaxed">
+                Serving international markets with a state-of-the-art facility
+                spanning 8000m² and growing.
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
-              <FaUsers className="text-blue-500 text-4xl mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Skilled Workforce</h3>
-              <p>
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition hover:-translate-y-1">
+              <FaUsers className="text-[#0F8652] text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-semibold mb-4 text-[#0B132B]">
+                Skilled Workforce
+              </h3>
+              <p className="text-[#6C6C6C] text-sm leading-relaxed">
                 Employing 300 skilled individuals committed to quality, cost,
                 delivery, and service excellence.
               </p>
@@ -149,36 +157,37 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission, Vision, Promise */}
-      <section className="bg-blue-500 text-white py-12">
+      {/* Values Section */}
+      {/* Values Section */}
+      <section className="bg-[#0B132B] text-white py-12 px-4">
         <motion.div
           className="container mx-auto text-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-3xl font-bold mb-8">Our Values</h2>
+          <h2 className="font-serif text-3xl font-bold mb-8">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-blue-600 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <FaBullseye className="text-yellow-400 text-4xl mb-4" />
-              <h3 className="text-xl font-bold mb-4">Our Mission</h3>
-              <p>
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaBullseye className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">Our Mission</h3>
+              <p className="text-white/90 text-sm leading-relaxed">
                 To deliver innovative and reliable wire harness solutions for a
                 sustainable future.
               </p>
             </div>
-            <div className="bg-blue-600 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <FaLightbulb className="text-yellow-400 text-4xl mb-4" />
-              <h3 className="text-xl font-bold mb-4">Our Vision</h3>
-              <p>
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaLightbulb className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">Our Vision</h3>
+              <p className="text-white/90 text-sm leading-relaxed">
                 To lead the industry with cutting-edge technology and unmatched
                 customer focus.
               </p>
             </div>
-            <div className="bg-blue-600 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <FaHandshake className="text-yellow-400 text-4xl mb-4" />
-              <h3 className="text-xl font-bold mb-4">Our Promise</h3>
-              <p>
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaHandshake className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">Our Promise</h3>
+              <p className="text-white/90 text-sm leading-relaxed">
                 To ensure seamless connections and superior quality in every
                 solution we provide.
               </p>
@@ -187,9 +196,9 @@ export default function About() {
         </motion.div>
       </section>
 
-      {/* Timeline */}
-      <section className="container mx-auto py-12 px-6 lg:px-20">
-        <h2 className="text-3xl font-bold text-center text-blue-500 mb-8">
+      {/* Timeline Section */}
+      {/* <section className="container mx-auto py-12 px-6 lg:px-20">
+        <h2 className="font-serif text-3xl font-bold text-center text-[#0B132B] mb-8">
           Our Journey
         </h2>
         <motion.div
@@ -203,14 +212,16 @@ export default function About() {
             items={items}
             mode="VERTICAL"
             theme={{
-              primary: "blue",
-              secondary: "gray",
+              primary: "#0F8652",
+              secondary: "#6C6C6C",
               cardBgColor: "white",
-              cardForeColor: "black",
+              cardForeColor: "#0B132B",
             }}
+            slideShow
+            enableOutline
           />
         </motion.div>
-      </section>
+      </section> */}
     </main>
   );
 }

@@ -5,26 +5,27 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <main className="bg-gray-50 text-gray-800">
+    <main className="bg-white text-[#0B132B] font-sans">
       {/* Hero Section */}
       <motion.div
-        className="bg-blue-500 text-white py-16"
+        className="py-16 px-4 bg-[#0B132B]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">Contact Us</h1>
-          <p className="mt-4 text-lg">
+        <div className="container mx-auto text-center text-white">
+          <h1 className="text-4xl font-bold font-serif">Contact Us</h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
             Get in touch with PT. Grace Solution for your wire harness and
-            tooling needs. We’re here to help!
+            tooling needs. Our team is ready to assist you with innovative,
+            reliable, and quality-driven solutions.
           </p>
         </div>
       </motion.div>
 
       {/* Contact Information Section */}
       <section className="container mx-auto py-12 px-6 lg:px-20">
-        <h2 className="text-3xl font-bold text-blue-500 mb-8 text-center">
+        <h2 className="font-serif text-3xl font-bold text-[#0B132B] mb-8 text-center">
           Reach Out to Us
         </h2>
         <motion.div
@@ -34,55 +35,64 @@ export default function ContactUs() {
           transition={{ duration: 1 }}
         >
           {/* Phone */}
-          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
-            <FaPhoneAlt className="text-blue-500 text-4xl mb-4" />
-            <h3 className="text-xl font-bold mb-4">Call Us</h3>
-            <p className="text-gray-600">(0770) 611-367</p>
-            <p className="text-gray-600">Monday - Friday, 9:00 AM - 5:00 PM</p>
+          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition hover:-translate-y-1">
+            <FaPhoneAlt className="text-[#0F8652] text-4xl mb-4" />
+            <h3 className="text-xl font-bold font-serif mb-4">Call Us</h3>
+            <p className="text-[#6C6C6C]">(0770) 611-367</p>
+            <p className="text-[#6C6C6C]">Mon - Fri, 9:00 AM - 5:00 PM</p>
           </div>
 
           {/* Email */}
-          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
-            <FaEnvelope className="text-blue-500 text-4xl mb-4" />
-            <h3 className="text-xl font-bold mb-4">Email Us</h3>
-            <p className="text-gray-600">info@gracesolution.com</p>
-            <p className="text-gray-600">
-              We’ll get back to you within 24 hours.
+          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition hover:-translate-y-1">
+            <FaEnvelope className="text-[#0F8652] text-4xl mb-4" />
+            <h3 className="text-xl font-bold font-serif mb-4">Email Us</h3>
+            <p className="text-[#6C6C6C]">
+              <a
+                href="mailto:info@gracesolution.com"
+                className="underline hover:text-[#0F8652]"
+              >
+                info@gracesolution.com
+              </a>
             </p>
+            <p className="text-[#6C6C6C]">We’ll reply within 24 hours.</p>
           </div>
 
           {/* Location */}
-          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition">
-            <FaMapMarkerAlt className="text-blue-500 text-4xl mb-4" />
-            <h3 className="text-xl font-bold mb-4">Visit Us</h3>
-            <p className="text-gray-600">
-              Batamindo Industrial Park, Muka Kuning
+          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition hover:-translate-y-1">
+            <FaMapMarkerAlt className="text-[#0F8652] text-4xl mb-4" />
+            <h3 className="text-xl font-bold font-serif mb-4">Visit Us</h3>
+            <p className="text-[#6C6C6C]">Batamindo Industrial Park</p>
+            <p className="text-[#6C6C6C]">
+              Muka Kuning, Batam 29433, Indonesia
             </p>
-            <p className="text-gray-600">Batam 29433, Indonesia</p>
           </div>
         </motion.div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-6 lg:px-20">
-          <h2 className="text-3xl font-bold text-center text-blue-500 mb-8">
+      <section className="bg-[#F2F2F2] py-12 px-4">
+        <div className="container mx-auto lg:px-20">
+          <h2 className="font-serif text-3xl font-bold text-center text-[#0B132B] mb-2">
             Send Us a Message
           </h2>
+          <p className="text-center text-[#6C6C6C] mb-8">
+            Let us know how we can help, and we’ll get back to you as soon as
+            possible.
+          </p>
           <form className="bg-white shadow-lg rounded-lg p-6 lg:p-12 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
               {/* Name */}
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-gray-600 font-semibold mb-2"
+                  className="block text-[#6C6C6C] font-semibold mb-2"
                 >
                   Full Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full p-3 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -91,14 +101,14 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-gray-600 font-semibold mb-2"
+                  className="block text-[#6C6C6C] font-semibold mb-2"
                 >
                   Email Address
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-3 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"
+                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -108,30 +118,30 @@ export default function ContactUs() {
             <div className="mb-6">
               <label
                 htmlFor="subject"
-                className="block text-gray-600 font-semibold mb-2"
+                className="block text-[#6C6C6C] font-semibold mb-2"
               >
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
                 placeholder="Enter the subject"
               />
             </div>
 
             {/* Message */}
-            <div className="mb-6">
+            <div className="mb-8">
               <label
                 htmlFor="message"
-                className="block text-gray-600 font-semibold mb-2"
+                className="block text-[#6C6C6C] font-semibold mb-2"
               >
                 Message
               </label>
               <textarea
                 id="message"
                 rows={6}
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring focus:ring-blue-200"
+                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
                 placeholder="Write your message here"
               ></textarea>
             </div>
@@ -140,7 +150,7 @@ export default function ContactUs() {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600 transition duration-300"
+                className="bg-[#0F8652] text-white py-3 px-6 rounded-md hover:bg-[#0D7345] transition duration-300 font-semibold transform hover:scale-105 shadow-lg"
               >
                 Send Message
               </button>
@@ -150,9 +160,9 @@ export default function ContactUs() {
       </section>
 
       {/* Location Map */}
-      <section className="py-12">
-        <div className="container mx-auto px-6 lg:px-20">
-          <h2 className="text-3xl font-bold text-center text-blue-500 mb-8">
+      <section className="py-12 px-4">
+        <div className="container mx-auto lg:px-20">
+          <h2 className="font-serif text-3xl font-bold text-center text-[#0B132B] mb-8">
             Our Location
           </h2>
           <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg">
@@ -163,6 +173,7 @@ export default function ContactUs() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              title="Batamindo Industrial Park Location Map"
             ></iframe>
           </div>
         </div>
