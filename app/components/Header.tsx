@@ -1,166 +1,133 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation"; // Use usePathname for Next.js 13+ App Router
 import Image from "next/image";
-import {
-  BsWhatsapp,
-  BsFillPinMapFill,
-  BsTelephoneFill,
-  BsArrowRight,
-  BsArrowLeft,
-} from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Header = () => {
-  const [mobileNavBar, setMobileNavBar] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isClient, setIsClient] = useState(false); // Added state to check client-side rendering
+  const pathname = usePathname(); // Get the current path using usePathname
 
   const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50);
+    setIsScrolled(window.scrollY > 50); // Change navbar style after scrolling 50px
   };
 
   useEffect(() => {
+    setIsClient(true); // Indicate that the component is now mounted on the client
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Dynamic background for the header
-  const navBg = isScrolled ? "bg-white" : "bg-[#0B132B]";
+  const navBg = isScrolled ? "bg-white shadow-md" : "bg-transparent";
+  const logoSize = isScrolled ? 80 : 100; // Shrink the logo size when scrolled
+  const navHeight = isScrolled ? "h-[60px]" : "h-[90px]"; // Shrink navbar height on scroll
+  const navPadding = isScrolled ? "px-6" : "px-12"; // Shrink navbar padding
+  const logoTransition = "transform 0.3s ease"; // Smooth transition for logo size
+
+  // Function to check if the link is active
+  const isActiveLink = (href: string) => isClient && pathname === href;
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-md ${navBg}`}
-      style={{
-        height: isScrolled ? "70px" : "90px",
-      }}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${navBg} ${navHeight}`}
     >
-      <div className="container mx-auto px-6 lg:px-20 flex justify-between items-center h-full">
+      <div
+        className={`container mx-auto ${navPadding} flex justify-between items-center h-full transition-all duration-300`}
+      >
         {/* Logo Section */}
         <Link href="/">
           <Image
             src="./Image/Logo/GraceSolutionLogo.png"
-            width={100}
-            height={80}
+            width={logoSize}
+            height={logoSize}
             alt="Grace Solution Logo"
-            className="cursor-pointer"
+            className="cursor-pointer transition-all duration-300"
+            style={{ transition: logoTransition }} // Apply smooth transition to logo
           />
         </Link>
 
-        {/* Contact Information (Desktop) */}
-        <div className="hidden lg:flex items-center gap-10">
-          <div
-            className={`flex items-center gap-3 ${
-              isScrolled ? "text-[#0B132B]" : "text-white"
-            }`}
+        {/* Main Navigation */}
+        <div className="flex items-center justify-center flex-grow space-x-10 font-sans">
+          <Link
+            href="/"
+            className={`${
+              isActiveLink("/") ? "text-[#0F8652] font-semibold" : "text-black"
+            } hover:text-[#0F8652] transition duration-300 ease-out`}
           >
-            <BsFillPinMapFill className="text-xl" />
-            <span className="text-sm">
-              Muka-Kuning 29433, Batam - Indonesia
-            </span>
-          </div>
-          <div
-            className={`flex items-center gap-3 ${
-              isScrolled ? "text-[#0B132B]" : "text-white"
-            }`}
+            Home
+          </Link>
+
+          <Link
+            href="/services"
+            className={`${
+              isActiveLink("/services")
+                ? "text-[#0F8652] font-semibold"
+                : "text-black"
+            } hover:text-[#0F8652] transition duration-300 ease-out`}
           >
-            <BsTelephoneFill className="text-xl" />
-            <span className="text-sm">(0770) 611-367</span>
-          </div>
-          <Link href="/contact">
-            <button
-              className={`bg-[#0F8652] ${
-                isScrolled ? "text-[#0B132B]" : "text-white"
-              } flex items-center gap-2 hover:bg-[#0D7345] px-4 py-2 rounded-md shadow-md transition duration-300 font-semibold`}
-            >
+            Services
+          </Link>
+
+          <Link
+            href="/products"
+            className={`${
+              isActiveLink("/products")
+                ? "text-[#0F8652] font-semibold"
+                : "text-black"
+            } hover:text-[#0F8652] transition duration-300 ease-out`}
+          >
+            Products
+          </Link>
+
+          <Link
+            href="/about"
+            className={`${
+              isActiveLink("/about")
+                ? "text-[#0F8652] font-semibold"
+                : "text-black"
+            } hover:text-[#0F8652] transition duration-300 ease-out`}
+          >
+            About Us
+          </Link>
+
+          <Link
+            href="/contact"
+            className={`${
+              isActiveLink("/contact")
+                ? "text-[#0F8652] font-semibold"
+                : "text-black"
+            } hover:text-[#0F8652] transition duration-300 ease-out`}
+          >
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Social Media Icons */}
+        <div className="flex items-center space-x-4">
+          <Link
+            href="https://www.facebook.com"
+            target="_blank"
+            className="text-black hover:text-[#0F8652] transition duration-300 ease-out"
+          >
+            <i className="fab fa-facebook-f"></i>
+          </Link>
+          <Link
+            href="https://www.instagram.com"
+            target="_blank"
+            className="text-black hover:text-[#0F8652] transition duration-300 ease-out"
+          >
+            <i className="fab fa-instagram"></i>
+          </Link>
+          <Link href="https://wa.me/6281261007619" target="_blank">
+            <button className="bg-[#0F8652] text-white hover:bg-[#0D7345] flex items-center gap-2 px-4 py-2 rounded-md shadow-md transition duration-300 ease-out">
               <BsWhatsapp className="text-lg" />
               Contact Us
             </button>
           </Link>
         </div>
-
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setMobileNavBar(!mobileNavBar)}
-          className={`${
-            isScrolled ? "text-[#0B132B]" : "text-white"
-          } lg:hidden text-2xl`}
-        >
-          {mobileNavBar ? <BsArrowLeft /> : <BsArrowRight />}
-        </button>
       </div>
-
-      {/* Mobile Navigation */}
-      <nav
-        className={`fixed top-0 left-0 ${navBg} w-[250px] h-full shadow-lg transform transition-transform duration-300 z-50 ${
-          mobileNavBar ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="px-6 py-4">
-          <Link href="/">
-            <Image
-              src="./Image/Logo/GraceSolutionLogo.png"
-              width={100}
-              height={75}
-              alt="Grace Solution Logo"
-              className="cursor-pointer mb-6"
-            />
-          </Link>
-          <ul className="space-y-6">
-            {/* For mobile, keep links white on a navy background */}
-            <li>
-              <Link
-                href="/services"
-                className="text-white hover:text-[#0F8652] transition font-medium"
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/products"
-                className="text-white hover:text-[#0F8652] transition font-medium"
-              >
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="text-white hover:text-[#0F8652] transition font-medium"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="text-white hover:text-[#0F8652] transition font-medium"
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      {/* Desktop Navigation with a glass-like background */}
-      <nav className="hidden lg:flex justify-center py-2">
-        <div className="bg-[#0B132B]/60 backdrop-blur-md rounded-full px-8 py-2">
-          <ul className="flex gap-12 text-sm font-medium text-white">
-            <li className="hover:text-[#0F8652] transition">
-              <Link href="/services">Services</Link>
-            </li>
-            <li className="hover:text-[#0F8652] transition">
-              <Link href="/products">Products</Link>
-            </li>
-            <li className="hover:text-[#0F8652] transition">
-              <Link href="/about">About</Link>
-            </li>
-            <li className="hover:text-[#0F8652] transition">
-              <Link href="/contact">Contact Us</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
   );
 };

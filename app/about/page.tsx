@@ -11,6 +11,14 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 
+import {
+  FaFilter,
+  FaTools,
+  FaBroom,
+  FaClipboardCheck,
+  FaRecycle,
+} from "react-icons/fa";
+
 export default function About() {
   const items = [
     {
@@ -75,7 +83,6 @@ export default function About() {
           </p>
         </div>
       </motion.div>
-
       {/* About Company */}
       <section className="container mx-auto py-12 px-6 lg:px-20">
         <motion.div
@@ -109,7 +116,79 @@ export default function About() {
           </div>
         </motion.div>
       </section>
+      <section className="bg-[#0B132B] text-white py-12 px-4">
+        <motion.div
+          className="container mx-auto text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="font-serif text-3xl font-bold mb-8">
+            Our Kaizen 5S Philosophy
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {/* Sort (Seiri) */}
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaFilter className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">
+                Sort <span className="text-sm">(Seiri)</span>
+              </h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Eliminating unnecessary items from workspaces to enhance focus
+                on essential tools and materials.
+              </p>
+            </div>
 
+            {/* Set in Order (Seiton) */}
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaTools className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">
+                Set in Order <span className="text-sm">(Seiton)</span>
+              </h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Organizing workstations for maximum efficiency with logical tool
+                placement and material flow.
+              </p>
+            </div>
+
+            {/* Shine (Seiso) */}
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaBroom className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">
+                Shine <span className="text-sm">(Seiso)</span>
+              </h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Maintaining spotless work environments to ensure quality
+                products and safe operations.
+              </p>
+            </div>
+
+            {/* Standardize (Seiketsu) */}
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaClipboardCheck className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">
+                Standardize <span className="text-sm">(Seiketsu)</span>
+              </h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Implementing consistent procedures across all operations for
+                reliable quality outcomes.
+              </p>
+            </div>
+
+            {/* Sustain (Shitsuke) */}
+            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
+              <FaRecycle className="text-white text-4xl mb-4" />
+              <h3 className="font-serif text-xl font-bold mb-4">
+                Sustain <span className="text-sm">(Shitsuke)</span>
+              </h3>
+              <p className="text-white/90 text-sm leading-relaxed">
+                Cultivating continuous improvement through disciplined adherence
+                to best practices.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </section>
       {/* Achievements */}
       <section className="bg-[#F2F2F2] py-12 px-4">
         <div className="container mx-auto lg:px-20">
@@ -156,7 +235,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* Values Section */}
       {/* Values Section */}
       <section className="bg-[#0B132B] text-white py-12 px-4">
@@ -195,6 +273,10 @@ export default function About() {
           </div>
         </motion.div>
       </section>
+      {/* Kaizen Culture Section */}
+
+      {/* 5S Kaizen Principles Section */}
+      {/* 5S Kaizen Principles Section - Dark Theme */}
 
       {/* Timeline Section */}
       {/* <section className="container mx-auto py-12 px-6 lg:px-20">

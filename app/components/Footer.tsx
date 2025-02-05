@@ -24,7 +24,7 @@ function Footer() {
             <h3 className="text-lg lg:text-xl font-semibold mt-4 text-center lg:text-left">
               WIRE HARNESS & CABLE ASSEMBLY SOLUTIONS
             </h3>
-            <p className="mt-4 text-[#F2F2F2] text-sm leading-relaxed text-center lg:text-left">
+            <p className="mt-4 text-[#F2F2F2] text-sm leading-relaxed text-center lg:text-left font-sans">
               We deliver precision-engineered wire harness and cable assembly
               solutions for industrial and commercial applications, ensuring
               excellence at every step.
@@ -50,11 +50,6 @@ function Footer() {
                 sales@grace-solution.com
               </span>
             </div>
-            <Link href="/contact">
-              <button className="bg-[#0F8652] hover:bg-[#0D7345] text-white py-2 px-6 rounded-md mt-4 transition font-medium">
-                Get in Touch
-              </button>
-            </Link>
           </div>
 
           {/* Address */}
