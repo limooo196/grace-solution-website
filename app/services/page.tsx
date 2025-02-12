@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,28 +9,28 @@ export default function Services() {
       title: "Wire Harness",
       description:
         "Our wire harness solutions are crafted with precision and top-quality materials. Rigorous testing and innovative design ensure seamless, efficient electrical connectivity for any application.",
-      image: "/Image/optimized/wire_harness_2.webp",
+      image: "./Image/fix_size/wire_harness_2.png",
       link: "/services/wireHarness",
     },
     {
       title: "Insert Molding",
       description:
         "Our insert molding combines precision engineering, seamless component integration, and superior materials. Meticulous attention to detail delivers unmatched reliability and durability.",
-      image: "/Image/optimized/insert_molding.webp",
+      image: "/Image/fix_size/rsz_insert_molding.jpg",
       link: "/services/insertMolding",
     },
     {
       title: "Tooling Fabrication",
       description:
         "Leveraging cutting-edge technology and precision craftsmanship, our tooling fabrication sets industry benchmarks for reliability, durability, and innovation.",
-      image: "/Image/optimized/tooling_fabrication.webp",
+      image: "./Image/fix_size/warehouse_1.jpg",
       link: "/services/toolingFabrication",
     },
     {
       title: "Warehouse and Logistics",
       description:
         "Our comprehensive warehousing and logistics services ensure efficient inventory management, seamless operations, and timely deliveries, tailored to your business needs.",
-      image: "/Image/optimized/warehouse.webp",
+      image: "/Image/fix_size/warehouse_1.jpg",
       link: "/services/warehouse",
     },
   ];
@@ -37,20 +38,26 @@ export default function Services() {
   return (
     <main className="w-full bg-[#F2F2F2] font-sans">
       {/* Page Intro Section */}
-      <section className="pt-12 pb-8 px-4 text-center">
-        <h1 className="font-serif text-3xl md:text-4xl font-bold text-[#0B132B]">
-          Services
-        </h1>
-        <p className="text-[#6C6C6C] mt-4 max-w-2xl mx-auto">
-          Explore our range of specialized services designed to deliver
-          exceptional quality, innovation, and reliability. Each offering is
-          tailored to ensure that your business thrives with the support of our
-          dedicated expertise.
-        </p>
-      </section>
+
+      <motion.div
+        className="bg-[#0B132B] text-white py-16 px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl font-serif font-bold">Services</h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
+            Explore our range of specialized services designed to deliver
+            exceptional quality, innovation, and reliability. Each offering is
+            tailored to ensure that your business thrives with the support of
+            our dedicated expertise.
+          </p>
+        </div>
+      </motion.div>
 
       {/* Services Grid */}
-      <section className="container mx-auto px-4 xl:px-60 pb-16">
+      <section className="container mx-auto px-4 xl:px-60 pb-16 py-12">
         <div className="space-y-10">
           {services.map((service, index) => (
             <div
@@ -62,7 +69,7 @@ export default function Services() {
                 <div className="relative w-full h-64 lg:h-full">
                   <Image
                     className="object-cover w-full h-full"
-                    src={service.image}
+                    src="/Image/warehouse.jpg"
                     alt={`${service.title} Service`}
                     fill
                     sizes="(max-width:1200px) 50vw, 33vw"

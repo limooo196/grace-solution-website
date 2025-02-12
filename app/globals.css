@@ -8,6 +8,8 @@ html, body {
     font-family: 'Open Sans'; /* Apply Open Sans to the body */
     font-weight: 500;
     font-style: normal;
+    scroll-behavior: smooth;
+
 
 }
 

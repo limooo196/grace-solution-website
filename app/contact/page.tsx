@@ -2,6 +2,7 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ContactForm from "../components/ContactForm";
 
 export default function ContactUs() {
   return (
@@ -70,94 +71,7 @@ export default function ContactUs() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="bg-[#F2F2F2] py-12 px-4">
-        <div className="container mx-auto lg:px-20">
-          <h2 className="font-serif text-3xl font-bold text-center text-[#0B132B] mb-2">
-            Send Us a Message
-          </h2>
-          <p className="text-center text-[#6C6C6C] mb-8">
-            Let us know how we can help, and we’ll get back to you as soon as
-            possible.
-          </p>
-          <form className="bg-white shadow-lg rounded-lg p-6 lg:p-12 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-              {/* Name */}
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-[#6C6C6C] font-semibold mb-2"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
-                  placeholder="Enter your full name"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-[#6C6C6C] font-semibold mb-2"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
-                  placeholder="Enter your email address"
-                />
-              </div>
-            </div>
-
-            {/* Subject */}
-            <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="block text-[#6C6C6C] font-semibold mb-2"
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
-                placeholder="Enter the subject"
-              />
-            </div>
-
-            {/* Message */}
-            <div className="mb-8">
-              <label
-                htmlFor="message"
-                className="block text-[#6C6C6C] font-semibold mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={6}
-                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0F8652] outline-none"
-                placeholder="Write your message here"
-              ></textarea>
-            </div>
-
-            {/* Submit Button */}
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-[#0F8652] text-white py-3 px-6 rounded-md hover:bg-[#0D7345] transition duration-300 font-semibold transform hover:scale-105 shadow-lg"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <ContactForm />
 
       {/* Location Map */}
       <section className="py-12 px-4">

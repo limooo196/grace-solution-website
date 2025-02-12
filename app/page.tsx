@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  BsCheck,
   BsWhatsapp,
   BsBuildingFillGear,
   BsArrowRightCircle,
@@ -13,6 +14,8 @@ import { MdOutlinePriceCheck } from "react-icons/md";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { motion } from "framer-motion";
+import { FiCheck } from "react-icons/fi"; // Feather Icons
+import { HiCheck } from "react-icons/hi"; // Hero Icons
 
 export default function Home() {
   return (
@@ -35,36 +38,56 @@ export default function Home() {
         >
           <div className="bg-white bg-opacity-90 rounded-lg shadow-xl max-w-3xl p-6 md:p-10 w-full lg:w-1/2">
             <h1 className="font-sans text-3xl md:text-4xl font-bold text-[#0B132B] leading-tight">
-              Your Trusted Partner in{" "}
-              <span className="text-[#0F8652]">Wire Harness</span> and{" "}
-              <span className="text-[#0F8652]">Cable Assembly Solutions</span>
+              Custom Wire Harness & Cable Assemblies for Automotive & Industrial
+              Sectors
             </h1>
+
             <h2 className="font-sans mt-4 text-xl md:text-2xl text-[#6C6C6C] italic">
-              Precision Craftsmanship, Reliable Performance
+              ISO 9001 Certified | High Durability | 25+ Years of Expertise
             </h2>
-            <p className="mt-6 text-[#6C6C6C] leading-relaxed text-md md:text-lg">
-              For over two decades,{" "}
-              <strong className="text-[#0B132B]">Grace Solutions</strong> has
-              set the gold standard in Wire Harness and Cable Assembly
-              solutions. Our dedication to quality and innovation has made us a
-              trusted leader in the industry.
-            </p>
-            <p className="mt-4 text-[#6C6C6C] leading-relaxed text-md md:text-lg">
-              Let our expertise take your projects further and exceed
-              expectations.
-            </p>
-            <div className="mt-8">
+
+            <div className="mt-6 space-y-4">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li className="flex items-center">
+                  <HiCheck className="text-[#0F8652] mr-2" />{" "}
+                  <span>25+ Years in the Industry</span>
+                </li>
+                <li className="flex items-center">
+                  <HiCheck className="text-[#0F8652] mr-2" />{" "}
+                  <span>98% On-Time Delivery Rate</span>
+                </li>
+              </ul>
+
+              <p className="text-[#6C6C6C] leading-relaxed text-md md:text-lg">
+                For over two decades,{" "}
+                <strong className="text-[#0B132B]">Grace Solutions</strong> has
+                been driving innovation in demanding industries, delivering
+                high-performance wire harnesses and cable assemblies.
+              </p>
+
+              <p className="text-[#6C6C6C] leading-relaxed text-md md:text-lg">
+                Last year, we successfully delivered 14,200+ assemblies with
+                zero critical defects. Let us improve your supply chain with
+                solutions that outperform durability standards by 40%.
+              </p>
+            </div>
+
+            <div className="mt-8 space-y-3">
               <a
                 href="https://wa.me/6281261007619"
-                className="inline-flex items-center gap-x-2 bg-[#0F8652] hover:bg-[#0D7345] text-white font-semibold rounded-md px-6 py-3 shadow-lg transition-transform hover:scale-105"
+                className="inline-flex items-center gap-x-2 bg-[#0F8652] hover:bg-[#0D7345] text-white font-semibold rounded-md px-8 py-4 shadow-lg transition-transform hover:scale-105 text-lg"
               >
                 <BsWhatsapp className="text-2xl" />
-                <span>Contact Us</span>
+                <span>Get in Touch with Our Team →</span>
               </a>
+              <p className="text-sm text-[#6C6C6C] italic">
+                Fast Response • 24/7 Availability
+              </p>
             </div>
           </div>
         </motion.div>
       </section>
+
       {/* Stats Section with Animation */}
       <section className="bg-[#0B132B] py-12 overflow-hidden ">
         <div className="container mx-auto overflow-hidden">
@@ -98,6 +121,66 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-[#F3F4F6] to-[#E5E7EB] py-20 px-6 sm:px-8 lg:px-12 font-serif">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div className="space-y-8 text-gray-800">
+              <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900">
+                Leading the Industry in Precision Engineering
+              </h2>
+              <h1 className="text-5xl sm:text-6xl font-bold text-emerald-600">
+                Your Trusted Partner for Custom Engineering Solutions
+              </h1>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                For over 20 years, <strong>PT. Grace Solution</strong> has been
+                a leader in providing high-performance wire harnesses and cable
+                assemblies. We specialize in delivering custom,
+                precision-engineered solutions for a range of industries,
+                designed to meet your specific requirements.
+              </p>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-center">
+                  <HiCheck className="text-emerald-600 mr-2" />
+                  <span>ISO 9001 Certified Manufacturing Process</span>
+                </li>
+                <li className="flex items-center">
+                  <HiCheck className="text-emerald-600 mr-2" />
+                  <span>
+                    State-of-the-Art Facilities at Batamindo Industrial Park
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <HiCheck className="text-emerald-600 mr-2" />
+                  <span>
+                    Custom Solutions for Automotive, Aerospace, and Industrial
+                    Applications
+                  </span>
+                </li>
+              </ul>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-emerald-600/20">
+                Learn More About Our Company →
+              </button>
+            </div>
+
+            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="./Image/optimized/female_worker.jpeg"
+                alt="PT. Grace Solution Facility"
+                layout="fill"
+                className="object-cover"
+                priority
+              />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -206,8 +289,8 @@ export default function Home() {
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-[#F2F2F2]">
               <span className="underline decoration-[#0F8652]">
-                GRACE SOLUTIONS:
-              </span>{" "}
+                GRACE SOLUTIONS :
+              </span>
               Your Dependable Partner for Success
             </h1>
             <p className="text-[#F2F2F2]/80 italic mt-2 text-sm md:text-base max-w-2xl mx-auto">
@@ -366,92 +449,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+
       {/* Why Grace Solutions Section */}
 
       {/* Quality Section */}
-
-      <section className="relative bg-[#0B132B] text-white py-16 px-8 font-serif">
-        <div className="absolute inset-0">
-          <div
-            className="w-full h-full bg-no-repeat bg-center bg-cover opacity-10"
-            style={{ backgroundImage: "url(/path-to-your-illustration.svg)" }}
-            aria-hidden="true"
-          />
-        </div>
-
-        <div className="relative max-w-5xl mx-auto z-10">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            The <span className="text-[#0F8652]">Highest Quality</span> at Every
-            Stage
-          </h2>
-          <p className="text-[#F2F2F2] mb-8 max-w-2xl text-md md:text-lg leading-relaxed">
-            At PT. Grace Solution, we deliver exceptional quality at every step.
-            With cutting-edge facilities, certified processes, and a skilled
-            team, we ensure you receive reliable, premium products.
-          </p>
-
-          <div className="space-y-4 text-md leading-relaxed font-serif">
-            {[
-              {
-                heading: "State-of-the-Art Facilities",
-                description:
-                  "Secure infrastructure and stable utilities ensure smooth operations.",
-              },
-              {
-                heading: "ISO9001:2015 & UL Certified",
-                description:
-                  "Strict international standards guarantee safety and reliability.",
-              },
-              {
-                heading: "Advanced Machinery",
-                description:
-                  "Automated crimping, vertical molding, and precise testing equipment.",
-              },
-              {
-                heading: "Expert Testing Tools",
-                description:
-                  "Cross-section analyzers and LAN cable testers uphold product integrity.",
-              },
-              {
-                heading: "Skilled Workforce",
-                description:
-                  "KAIZEN & 5S principles drive continuous improvement and efficiency.",
-              },
-            ].map((item, idx) => (
-              <div className="flex items-start" key={idx}>
-                <span className="w-3 h-3 rounded-full bg-[#0F8652] mr-4 mt-1 flex-shrink-0" />
-
-                {/* Headings appear in brighter color, descriptions in a lighter shade */}
-                <div className="flex-1">
-                  <strong className="text-[#F2F2F2]">{item.heading}</strong>
-                  <span className="ml-1 text-gray-400">
-                    : {item.description}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12">
-            <Link
-              href="/services/"
-              className="inline-flex items-center gap-2 bg-[#0F8652] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#0D7345] transition-transform transform hover:scale-105 shadow-lg"
-              aria-label="Learn More"
-            >
-              Learn More
-              <svg
-                className="w-5 h-5 transform rotate-45"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                aria-hidden="true"
-              >
-                <path d="M10.293 15.707a1 1 0 010-1.414L14.586 10H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 011.414-1.414l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0z" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* Trusted by Companies Section */}
     </main>
   );
 }
