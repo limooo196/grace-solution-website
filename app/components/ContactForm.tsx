@@ -13,14 +13,16 @@ export default function ContactForm() {
   const [isSending, setIsSending] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
     setStatusMessage("");
