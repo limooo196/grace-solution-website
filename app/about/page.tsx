@@ -10,7 +10,6 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import Image from "next/image";
-
 import {
   FaFilter,
   FaTools,
@@ -83,6 +82,7 @@ export default function About() {
           </p>
         </div>
       </motion.div>
+
       {/* About Company */}
       <section className="container mx-auto py-12 px-6 lg:px-20">
         <motion.div
@@ -108,7 +108,7 @@ export default function About() {
           <div>
             <Image
               src="./Image/green-cable.jpg"
-              alt="Industry Leader"
+              alt="wire harness manufacturing process"
               width={600}
               height={400}
               className="rounded-lg shadow-lg object-cover"
@@ -116,6 +116,8 @@ export default function About() {
           </div>
         </motion.div>
       </section>
+
+      {/* Kaizen 5S Philosophy */}
       <section className="bg-[#0B132B] text-white py-12 px-4">
         <motion.div
           className="container mx-auto text-center"
@@ -124,76 +126,67 @@ export default function About() {
           transition={{ duration: 1 }}
         >
           <h2 className="font-serif text-3xl font-bold mb-8">
-            Our Kaizen 5S Philosophy
+            Our Kaizen 5S Philosophy: A Commitment to Excellence
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {/* Sort (Seiri) */}
-            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
-              <FaFilter className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">
-                Sort <span className="text-sm">(Seiri)</span>
-              </h3>
-              <p className="text-white/90 text-sm leading-relaxed">
-                Eliminating unnecessary items from workspaces to enhance focus
-                on essential tools and materials.
-              </p>
-            </div>
-
-            {/* Set in Order (Seiton) */}
-            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
-              <FaTools className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">
-                Set in Order <span className="text-sm">(Seiton)</span>
-              </h3>
-              <p className="text-white/90 text-sm leading-relaxed">
-                Organizing workstations for maximum efficiency with logical tool
-                placement and material flow.
-              </p>
-            </div>
-
-            {/* Shine (Seiso) */}
-            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
-              <FaBroom className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">
-                Shine <span className="text-sm">(Seiso)</span>
-              </h3>
-              <p className="text-white/90 text-sm leading-relaxed">
-                Maintaining spotless work environments to ensure quality
-                products and safe operations.
-              </p>
-            </div>
-
-            {/* Standardize (Seiketsu) */}
-            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
-              <FaClipboardCheck className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">
-                Standardize <span className="text-sm">(Seiketsu)</span>
-              </h3>
-              <p className="text-white/90 text-sm leading-relaxed">
-                Implementing consistent procedures across all operations for
-                reliable quality outcomes.
-              </p>
-            </div>
-
-            {/* Sustain (Shitsuke) */}
-            <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
-              <FaRecycle className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">
-                Sustain <span className="text-sm">(Shitsuke)</span>
-              </h3>
-              <p className="text-white/90 text-sm leading-relaxed">
-                Cultivating continuous improvement through disciplined adherence
-                to best practices.
-              </p>
-            </div>
+          <p className="text-lg max-w-2xl mx-auto text-[#F2F2F2]">
+            At PT. Grace Solution, our Kaizen 5S philosophy drives continuous
+            improvement, boosting productivity, reducing waste, and ensuring
+            high-quality products. Here is how we apply these principles:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-12">
+            {/* Kaizen Cards */}
+            {[
+              {
+                icon: FaFilter,
+                title: "Sort",
+                description:
+                  "Removing unnecessary items from the workspace to increase efficiency and focus.",
+              },
+              {
+                icon: FaTools,
+                title: "Set in Order",
+                description:
+                  "Organizing tools and materials in a systematic way for easy access.",
+              },
+              {
+                icon: FaBroom,
+                title: "Shine",
+                description:
+                  "Maintaining clean work environments that foster quality and safety.",
+              },
+              {
+                icon: FaClipboardCheck,
+                title: "Standardize",
+                description:
+                  "Implementing uniform processes and practices for consistent results.",
+              },
+              {
+                icon: FaRecycle,
+                title: "Sustain",
+                description:
+                  "Fostering a culture of continuous improvement to ensure long-term success.",
+              },
+            ].map(({ icon: Icon, title, description }, index) => (
+              <div
+                key={index}
+                className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1"
+              >
+                <Icon className="text-white text-4xl mb-4" />
+                <h3 className="font-serif text-xl font-bold mb-4">{title}</h3>
+                <p className="text-white/90 text-sm leading-relaxed">
+                  {description}
+                </p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </section>
+
       {/* Achievements */}
       <section className="bg-[#F2F2F2] py-12 px-4">
         <div className="container mx-auto lg:px-20">
           <h2 className="font-serif text-3xl font-bold text-center text-[#0B132B] mb-8">
-            Our Achievements
+            Our Milestones & Recognitions: A Journey of Success
           </h2>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -205,37 +198,37 @@ export default function About() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition hover:-translate-y-1">
               <FaMedal className="text-[#0F8652] text-4xl mb-4" />
               <h3 className="font-serif text-xl font-semibold mb-4 text-[#0B132B]">
-                ISO Certified
+                ISO Certified: Achieving Excellence
               </h3>
               <p className="text-[#6C6C6C] text-sm leading-relaxed">
-                We proudly hold ISO 9001:2015 and UL817 certifications, ensuring
-                our dedication to quality and safety.
+                Achieving ISO 9001:2015 certification is a testament to our
+                commitment to maintaining the highest quality standards.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition hover:-translate-y-1">
               <FaGlobe className="text-[#0F8652] text-4xl mb-4" />
               <h3 className="font-serif text-xl font-semibold mb-4 text-[#0B132B]">
-                Global Expansion
+                Global Expansion: Reaching New Heights
               </h3>
               <p className="text-[#6C6C6C] text-sm leading-relaxed">
-                Serving international markets with a state-of-the-art facility
-                spanning 8000m² and growing.
+                From a small start to a global presence, our 8000m² facility now
+                serves markets worldwide, strengthening our industry leadership.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition hover:-translate-y-1">
               <FaUsers className="text-[#0F8652] text-4xl mb-4" />
               <h3 className="font-serif text-xl font-semibold mb-4 text-[#0B132B]">
-                Skilled Workforce
+                Skilled Workforce: The Backbone of Our Success
               </h3>
               <p className="text-[#6C6C6C] text-sm leading-relaxed">
-                Employing 300 skilled individuals committed to quality, cost,
-                delivery, and service excellence.
+                With 300 dedicated professionals, we continue to grow, innovate,
+                and exceed customer expectations with every project.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
-      {/* Values Section */}
+
       {/* Values Section */}
       <section className="bg-[#0B132B] text-white py-12 px-4">
         <motion.div
@@ -244,66 +237,63 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="font-serif text-3xl font-bold mb-8">Our Values</h2>
+          <h2 className="font-serif text-3xl font-bold mb-8">
+            Our Core Values: Guiding Our Success
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto text-[#F2F2F2] mb-12">
+            Our core values are more than just words on paper. They shape our
+            culture, guide our decisions, and drive our success. Here is what we
+            stand for:
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
               <FaBullseye className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">Our Mission</h3>
+              <h3 className="font-serif text-xl font-bold mb-4">
+                Customer Satisfaction
+              </h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                To deliver innovative and reliable wire harness solutions for a
-                sustainable future.
+                We are committed to exceeding customer expectations, delivering
+                high-quality products and services that drive success.
               </p>
             </div>
             <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
               <FaLightbulb className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">Our Vision</h3>
+              <h3 className="font-serif text-xl font-bold mb-4">Innovation</h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                To lead the industry with cutting-edge technology and unmatched
-                customer focus.
+                We strive to stay ahead of the curve, embracing new technologies
+                and ideas to keep our products and services at the cutting edge.
               </p>
             </div>
             <div className="bg-[#4F5D8A] p-6 rounded-lg shadow-lg hover:shadow-xl transition hover:-translate-y-1">
               <FaHandshake className="text-white text-4xl mb-4" />
-              <h3 className="font-serif text-xl font-bold mb-4">Our Promise</h3>
+              <h3 className="font-serif text-xl font-bold mb-4">Integrity</h3>
               <p className="text-white/90 text-sm leading-relaxed">
-                To ensure seamless connections and superior quality in every
-                solution we provide.
+                We operate with honesty and transparency, ensuring that our
+                relationships with customers and partners are built on trust and
+                respect.
               </p>
             </div>
           </div>
         </motion.div>
       </section>
-      {/* Kaizen Culture Section */}
 
-      {/* 5S Kaizen Principles Section */}
-      {/* 5S Kaizen Principles Section - Dark Theme */}
-
-      {/* Timeline Section */}
-      {/* <section className="container mx-auto py-12 px-6 lg:px-20">
-        <h2 className="font-serif text-3xl font-bold text-center text-[#0B132B] mb-8">
-          Our Journey
-        </h2>
-        <motion.div
-          className="w-full overflow-x-hidden"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        >
+      {/* Timeline */}
+      <section className="bg-[#F9F9F9] py-12 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-serif text-[#0B132B] text-center mb-12">
+            Our Journey So Far
+          </h2>
           <Chrono
             items={items}
-            mode="VERTICAL"
+            mode="VERTICAL_ALTERNATING"
             theme={{
-              primary: "#0F8652",
-              secondary: "#6C6C6C",
-              cardBgColor: "white",
-              cardForeColor: "#0B132B",
+              primary: "#0B132B",
+              secondary: "#F2F2F2",
+              cardBgColor: "#ffffff",
             }}
-            slideShow
-            enableOutline
           />
-        </motion.div>
-      </section> */}
+        </div>
+      </section>
     </main>
   );
 }

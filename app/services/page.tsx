@@ -8,28 +8,28 @@ export default function Services() {
     {
       title: "Wire Harness",
       description:
-        "Our wire harness solutions are crafted with precision and top-quality materials. Rigorous testing and innovative design ensure seamless, efficient electrical connectivity for any application.",
+        "Our wire harnesses are designed for precision and reliability, using only the highest quality materials. Every product undergoes thorough testing to guarantee seamless electrical connections in any environment.",
       image: "./Image/fix_size/wire_harness_2.png",
       link: "/services/wireHarness",
     },
     {
       title: "Insert Molding",
       description:
-        "Our insert molding combines precision engineering, seamless component integration, and superior materials. Meticulous attention to detail delivers unmatched reliability and durability.",
+        "With advanced engineering and careful attention to detail, our insert molding services deliver durable, high-performance components that integrate perfectly into your systems, ensuring long-lasting results.",
       image: "/Image/fix_size/rsz_insert_molding.jpg",
       link: "/services/insertMolding",
     },
     {
       title: "Tooling Fabrication",
       description:
-        "Leveraging cutting-edge technology and precision craftsmanship, our tooling fabrication sets industry benchmarks for reliability, durability, and innovation.",
+        "Combining cutting-edge technology with expert craftsmanship, our tooling fabrication sets new industry standards. We focus on creating reliable, durable, and innovative tools that push the limits of performance.",
       image: "./Image/fix_size/warehouse_1.jpg",
       link: "/services/toolingFabrication",
     },
     {
       title: "Warehouse and Logistics",
       description:
-        "Our comprehensive warehousing and logistics services ensure efficient inventory management, seamless operations, and timely deliveries, tailored to your business needs.",
+        "Our warehouse and logistics solutions are designed for efficiency, ensuring smooth inventory management and timely deliveries. We tailor our services to meet the unique needs of your business, no matter the size or complexity.",
       image: "/Image/fix_size/warehouse_1.jpg",
       link: "/services/warehouse",
     },
@@ -46,12 +46,10 @@ export default function Services() {
         transition={{ duration: 1 }}
       >
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-serif font-bold">Services</h1>
+          <h1 className="text-4xl font-serif font-bold">Our Services</h1>
           <p className="mt-4 text-lg max-w-2xl mx-auto">
-            Explore our range of specialized services designed to deliver
-            exceptional quality, innovation, and reliability. Each offering is
-            tailored to ensure that your business thrives with the support of
-            our dedicated expertise.
+            Discover our range of specialized services, designed to deliver
+            excellence, innovation, and reliability tailored to your needs.
           </p>
         </div>
       </motion.div>
@@ -69,7 +67,7 @@ export default function Services() {
                 <div className="relative w-full h-64 lg:h-full">
                   <Image
                     className="object-cover w-full h-full"
-                    src="/Image/warehouse.jpg"
+                    src={service.image}
                     alt={`${service.title} Service`}
                     fill
                     sizes="(max-width:1200px) 50vw, 33vw"
@@ -110,10 +108,9 @@ export default function Services() {
             <span className="underline decoration-[#0F8652]">Work with Us</span>
           </h3>
           <p className="text-lg mb-8 leading-relaxed relative z-10 text-[#F2F2F2]/90">
-            Ready to bring your project to life with our expertise? Let’s
-            collaborate to create outstanding solutions that meet your exact
-            needs. Our team is dedicated to ensuring every requirement is met
-            with precision, quality, and personalized care.
+            Let's collaborate to create innovative solutions tailored to your
+            needs. Our team is committed to delivering top-tier results with
+            exceptional care and attention to detail.
           </p>
           <Link href="/contact" className="relative z-10 inline-block">
             <button

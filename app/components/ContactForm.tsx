@@ -31,14 +31,14 @@ export default function ContactForm() {
       const response = await fetch("/api/send", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json", // Ensure that the backend understands the data type
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData), // Send the form data
       });
 
       if (response.ok) {
         setStatusMessage("Message sent successfully!");
-        // Optional: Clear the form completely after sending
+        // Optionally: Clear the form after successful submission
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         setStatusMessage("Failed to send message. Please try again.");

@@ -144,9 +144,9 @@ export default function Home() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 For over 20 years, <strong>PT. Grace Solution</strong> has been
                 a leader in providing high-performance wire harnesses and cable
-                assemblies. We specialize in delivering custom,
-                precision-engineered solutions for a range of industries,
-                designed to meet your specific requirements.
+                assemblies. We specialize in delivering custom, high-performance
+                engineered solutions for a range of industries, designed to meet
+                your requirements.
               </p>
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-center">
@@ -162,14 +162,18 @@ export default function Home() {
                 <li className="flex items-center">
                   <HiCheck className="text-emerald-600 mr-2" />
                   <span>
-                    Custom Solutions for Automotive, Aerospace, and Industrial
-                    Applications
+                    Custom Solutions for Automotive and Industrial Applications
                   </span>
                 </li>
               </ul>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-emerald-600/20">
-                Learn More About Our Company →
-              </button>
+
+              <div className="mt-6 text-center">
+                <Link href="/about">
+                  <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-emerald-600/20">
+                    Learn More About Our Company →
+                  </button>
+                </Link>
+              </div>
             </div>
 
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
@@ -192,8 +196,8 @@ export default function Home() {
             Our Products
           </h1>
           <p className="text-[#6C6C6C] mt-2 max-w-lg mx-auto">
-            Explore our range of premium products designed to deliver
-            reliability, performance, and value.
+            Browse our products, built to ensure reliability, performance, and
+            value you can trust.
           </p>
         </div>
 

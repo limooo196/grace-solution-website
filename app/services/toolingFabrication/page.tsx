@@ -1,5 +1,7 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   AiOutlineTool,
   AiOutlineCheckCircle,
@@ -10,23 +12,26 @@ import { FaCogs, FaDraftingCompass, FaCertificate } from "react-icons/fa";
 export default function ToolingFabrication() {
   return (
     <main className="bg-gray-50">
-      <div className="container mx-auto px-6 lg:px-12 py-12">
-        {/* Header Section */}
-        <header className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#27176A]">
+      <motion.div
+        className="bg-[#0B132B] text-white py-16 px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl font-serif font-bold">
+            {" "}
             Tooling Fabrication Services
           </h1>
-          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
             At PT. Grace Solution, we specialize in crafting precision tools and
             fixtures that enhance manufacturing efficiency. With our certified
             expertise and advanced facilities, we deliver solutions tailored to
             your needs.
           </p>
-          <button className="mt-6 bg-[#25D366] text-white py-3 px-6 rounded hover:bg-[#1DAF54] transition duration-300">
-            Contact Us
-          </button>
-        </header>
-
+        </div>
+      </motion.div>
+      <div className="container mx-auto px-6 lg:px-12 py-12">
         {/* Key Features Section */}
         <section className="mb-20">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
@@ -184,21 +189,35 @@ export default function ToolingFabrication() {
             ))}
           </div>
         </section>
+      </div>
 
-        {/* Contact Section */}
-        <section className="text-center">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-            Ready to Elevate Your Manufacturing?
-          </h2>
-          <p className="text-lg text-gray-600 mb-6">
+      <section className="relative py-16 px-4 bg-[#0B132B] text-white">
+        <div className="max-w-3xl mx-auto text-center rounded-lg p-8 relative">
+          {/* Decorative Accent (optional) */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0B132B] via-[#4F5D8A] to-[#0B132B] opacity-80 rounded-lg"></div>
+
+          <h3 className="font-serif text-3xl font-bold mb-4 relative z-10">
+            <span className="underline decoration-[#0F8652]">
+              Ready to Elevate Your Manufacturing?
+            </span>
+          </h3>
+          <p className="text-lg mb-8 leading-relaxed relative z-10 text-[#F2F2F2]/90">
             Contact PT. Grace Solution today for precision tooling fabrication
             solutions.
           </p>
-          <button className="bg-[#25D366] text-white py-3 px-6 rounded hover:bg-[#1DAF54] transition duration-300">
-            Get in Touch
-          </button>
-        </section>
-      </div>
+          <Link href="/contact" className="relative z-10 inline-block">
+            <button
+              type="button"
+              className="bg-[#0F8652] hover:bg-[#0D7345] text-white py-3 px-8 rounded-md font-medium transition-transform transform hover:scale-105 shadow-xl"
+            >
+              Contact Us
+              <span className="inline-block ml-2 transform transition-transform group-hover:translate-x-1">
+                ➜
+              </span>
+            </button>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
